@@ -4,16 +4,21 @@
 │   │   └── index.js
 │   ├── app.js
 │   ├── components
-│   │   └── Main.js
+│   │   ├── Main.js
+│   │   ├── NavBar.js
+│   │   └── SearchBar.js
 │   ├── reducers
+│   │   ├── formReducer.js
 │   │   └── index.js
 │   ├── router
 │   │   └── index.js
 │   ├── styles
 │   │   ├── app.scss
-│   │   └── base
-│   │       ├── _core.scss
-│   │       └── _variables.scss
+│   │   ├── base
+│   │   │   ├── _core.scss
+│   │   │   └── _variables.scss
+│   │   └── components
+│   │       └── NavBar.scss
 │   └── tests
 │       └── components
 │           └── test_index.js
@@ -27,4 +32,4 @@
 ├── server.js
 └── webpack.config.js
 
-10 directories, 17 files
+11 directories, 21 files
