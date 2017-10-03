@@ -7,9 +7,7 @@ class NavBar extends Component {
     return (
     <div className="nav-container">
       <nav className="nav">
-        <a className="nav-link active" href="#">Active</a>
-        <a className="nav-link" href="#">Link</a>
-        <a className="nav-link" href="#">Link</a>
+      <h1>Spotify React and redux app</h1>
       </nav>
     </div>
     )

@@ -29,16 +29,17 @@ export function getMyInfo() {
   }
 }
 
-/* Simple way to get the text on the search bar */
-export function setSearchText(searchText)  {
-	return { type: SET_SEARCH_TEXT, searchText }
-}
-
 /* Fetch artist using the api return a promise */
 export function fetchArtist(artist_name)  {
 	return spotifyApi.searchArtists(artist_name)
   .then( data => {
-    console.log('Search artists by', data)
+    console.log('Search artists: ' + artist_name, data)
   })  
   .catch(err => console.error(err) )
 }
+
+/* Add data info for further use 
+* create something that can hold the info we need
+* passing it through the reducer and then print it.
+* render artist
+*/

@@ -2,12 +2,15 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 
+import NavBar from './NavBar'
+
 class Main extends Component {
   render() {
+    let {children} = this.props
     return (
       <div className="main-container">
-        <h1>Spotify flow init</h1>
-        {this.props.children}
+        <NavBar />
+        {children}
       </div>
     )
   }

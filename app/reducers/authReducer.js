@@ -22,7 +22,7 @@ const initialState = {
   }
 }
 
-/* User reducer */
+/* Auth reducer */
 export default function reduce(state = initialState, action) {
   switch (action.type) {
 
@@ -31,13 +31,11 @@ export default function reduce(state = initialState, action) {
     const {accessToken, refreshToken} = action
     return Object.assign({}, state, {accessToken, refreshToken})
 
-  // set loading property when the loading begins
   case SPOTIFY_ME_BEGIN:
     return Object.assign({}, state, {
       user: Object.assign({}, state.user, {loading: true})
     })
 
-  // assign data after loading is not true
   case SPOTIFY_ME_SUCCESS:
     return Object.assign({}, state, {
       user: Object.assign({}, state.user, action.data, {loading: false})
