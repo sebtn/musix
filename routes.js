@@ -6,9 +6,7 @@ const express = require('express')
 const router = new express.Router()
 
 // configure the express server
-const CLIENT_ID = '28d30630ee9a48669523a79f38770105'
 // const CLIENT_ID = process.env.client_id
-const CLIENT_SECRET = '031469a349c54d10a4134bc5c8963c92'
 // const CLIENT_SECRET = process.env.client_secret
 // const REDIRECT_URI = process.env.redirect_uri || 'http://localhost:3000/callback'
 const REDIRECT_URI =  'http://localhost:3000/callback/'
@@ -40,7 +38,7 @@ router.get('/login', (_, res) => {
 
 /**
  * The /callback endpoint - hit after the user logs in to spotifyApi
- * Verify that the state we put in the cookie matches the state in the query
+ * Verify that the state of the cookie matches the state in the query
  * parameter. Then, if all is good, redirect the user to the user page. If all
  * is not good, redirect the user to an error page
  */

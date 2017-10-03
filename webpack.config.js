@@ -22,7 +22,10 @@ module.exports = {
       {
         test: /\.scss$/,
         loader: 'style-loader!css-loader!sass-loader'
-      }
+      },
+      { 
+        test: /\.svg$/, loaders: ['raw-loader']
+      },
     ]
   },
   devtool: 'cheap-module-eval-source-map'

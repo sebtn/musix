@@ -1,6 +1,6 @@
 import {
   SPOTIFY_TOKENS, SPOTIFY_ME_BEGIN, SPOTIFY_ME_SUCCESS, SPOTIFY_ME_FAILURE
-} from '../actions';
+} from '../actions'
 
 /** The initial state; no tokens and no user info */
 const initialState = {
@@ -20,7 +20,7 @@ const initialState = {
     type: null,
     uri: null,
   }
-};
+}
 
 /* User reducer */
 export default function reduce(state = initialState, action) {

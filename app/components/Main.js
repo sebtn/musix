@@ -8,10 +8,11 @@ import NavBar from './NavBar'
 class Main extends Component {
   render() {
     return (
-      <div>
-        {this.props.children}
+      <div className="main-container">
+        <h1>Spotify flow init</h1>
         <NavBar/>
         <SearchBar/>
+        {this.props.children}
       </div>
     )
   }
