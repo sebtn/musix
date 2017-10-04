@@ -12,13 +12,13 @@ class Auth extends Component {
     const {accessToken, refreshToken} = params
     setTokens({accessToken, refreshToken})
     getMyInfo()
-  }
-
+  } 
+  
 /*------------------------------------------------------------------*/	
   render() {
     const { accessToken, refreshToken, user } = this.props
     return (
-      <div className="user">
+      <div className="auth-container">
         <h4>App now using connectected to spotify API!</h4>
         <SearchBar />
       </div>

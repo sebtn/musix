@@ -4,12 +4,15 @@ import {connect} from 'react-redux'
 
 import NavBar from './NavBar'
 
+
 class Main extends Component {
+
+/*------------------------------------------------------------------*/	
   render() {
-    let {children} = this.props
+    let {children, artist} = this.props
     return (
       <div className="main-container">
-        <NavBar />
+        <NavBar   />
         {children}
       </div>
     )
