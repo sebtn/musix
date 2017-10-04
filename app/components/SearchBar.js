@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { fetchArtist } from '../actions/';
+
+import { fetchArtist } from '../actions/'
 
 class SearchBar extends Component {
 
 /*------------------------------------------------------------------*/
   onInputChange = (event) => {
-    const {dispatch} = this.props;
     event.preventDefault()
-    let term = this.refs.SearchText.value
+    let term = this.refs.searchText.value
     this.setState({term: term})
     fetchArtist(term)
   }
@@ -23,7 +23,7 @@ class SearchBar extends Component {
               placeholder="Type artist name"
               className="form-control"
               onChange={this.onInputChange}              
-              ref="SearchText"
+              ref="searchText"
 						/>
 					</div>
         </div>
@@ -38,6 +38,12 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-const mapStateToProps = state => state
+// make the term part of the state
+const mapStateToProps = state => {
+  return {
+    searchText: state.searchText
+  }
+}
 
-export default connect(state => state, mapDispatchToProps)(SearchBar)
+export default connect(mapStateToProps, mapDispatchToProps)(SearchBar)
+

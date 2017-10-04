@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { getMyInfo, setTokens } from '../actions/'
 
@@ -16,10 +16,10 @@ class Auth extends Component {
 
 /*------------------------------------------------------------------*/	
   render() {
-    const { accessToken, refreshToken, user } = this.props;
+    const { accessToken, refreshToken, user } = this.props
     return (
       <div className="user">
-        <h2>Using the app connectected to spotify API!</h2>
+        <h4>App now using connectected to spotify API!</h4>
         <SearchBar />
       </div>
     )
@@ -36,4 +36,4 @@ const mapDispatchToProps = dispatch => {
 
 const mapStateToProps = state => state
 
-export default connect(state => state, mapDispatchToProps)(Auth)
+export default connect(mapStateToProps, mapDispatchToProps)(Auth)
