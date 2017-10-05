@@ -78,7 +78,7 @@ export default function artist(state=initialState, action) {
       return receiveArtists(state, action.artists)
 
     case FETCH_ARTISTS: 
-      return receiveArtists(state)
+      return fetchArtists(state)
 
     case RECEIVE_ARTIST_INFO:
       return receiveArtistInfo(state, action.artist)

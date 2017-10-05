@@ -17,9 +17,10 @@
 │   │   └── SearchBar.js
 │   ├── log_in.svg
 │   ├── reducers
+│   │   ├── artistsReducer.js
 │   │   ├── authReducer.js
-│   │   ├── fetchArtistReducer.js
-│   │   └── index.js
+│   │   ├── index.js
+│   │   └── searcherReducer.js
 │   ├── router
 │   │   └── index.js
 │   ├── styles
@@ -44,4 +45,4 @@
 ├── server.js
 └── webpack.config.js
 
-11 directories, 33 files
+11 directories, 34 files

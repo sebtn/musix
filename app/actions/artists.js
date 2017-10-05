@@ -9,8 +9,8 @@ import spotifyApi from './spoty'
 /* Fetch artist using the api return a promise
 * is an action generator using thunks 
 */
-export const START_FETCH_ARTIST = 'START_FETCH_ARTIST'
-export const startFetchArtist = (artistName) =>  {
+export const START_FETCH_ARTISTS = 'START_FETCH_ARTISTS'
+export const startFetchArtists = (artistName) =>  {
   return dispatch => {
     dispatch( fetchArtists(artistName) )
     return spotifyApi.searchArtists(artistName)

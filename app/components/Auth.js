@@ -19,7 +19,7 @@ class Auth extends Component {
     const { accessToken, refreshToken, user } = this.props
     return (
       <div className="auth-container">
-        <h4>App now using connectected to spotify API!</h4>
+        <p>App now using connected to spotify API!</p>
         <SearchBar />
       </div>
     )

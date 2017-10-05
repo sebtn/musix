@@ -1,12 +1,17 @@
+import { List, Map, fromJS } from 'immutable'
 import {
-  SPOTIFY_TOKENS, SPOTIFY_ME_BEGIN, SPOTIFY_ME_SUCCESS, SPOTIFY_ME_FAILURE
+  SPOTIFY_TOKENS, 
+  SPOTIFY_ME_BEGIN, 
+  SPOTIFY_ME_SUCCESS, 
+  SPOTIFY_ME_FAILURE
 } from '../actions'
 
 /** The initial state; no tokens and no user info */
-const initialState = {
+
+const initialState = Map({
   accessToken: null,
   refreshToken: null,
-  user: {
+  user: Map({
     loading: false,
     country: null,
     display_name: null,
@@ -19,7 +24,32 @@ const initialState = {
     product: null,
     type: null,
     uri: null,
-  }
+  })
+})
+
+function spotifyTokens(state) {
+  var newState = Map({
+    refreshToken,
+    accessToken
+  })
+  return state.merge(newState)
+}
+
+function spotifyMeBegin(state, user) {
+  var newState = fromJS({
+    user, 
+    loading: true
+  })
+  return state.merge(newState)  
+}
+
+function spotifyMeSuccess(state, user) {
+  var newState = fromJS({
+    user, 
+    data,
+    loading: false
+  })
+  return state.merge(newState)  
 }
 
 /* Auth reducer */
@@ -28,18 +58,13 @@ export default function reduce(state = initialState, action) {
 
   //set the token
   case SPOTIFY_TOKENS:
-    const {accessToken, refreshToken} = action
-    return Object.assign({}, state, {accessToken, refreshToken})
+    return spotifyTokens(state, action.accessToken, action.refreshToken)
 
   case SPOTIFY_ME_BEGIN:
-    return Object.assign({}, state, {
-      user: Object.assign({}, state.user, {loading: true})
-    })
+    return spotifyMeBegin(state, action.loading) 
 
   case SPOTIFY_ME_SUCCESS:
-    return Object.assign({}, state, {
-      user: Object.assign({}, state.user, action.data, {loading: false})
-    })
+    return spotifyMeSuccess(state, action.data, action.loading)
 
   case SPOTIFY_ME_FAILURE:
     return state

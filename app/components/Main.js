@@ -4,7 +4,6 @@ import {connect} from 'react-redux'
 
 import NavBar from './NavBar'
 
-
 class Main extends Component {
 
 /*------------------------------------------------------------------*/	

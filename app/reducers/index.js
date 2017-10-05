@@ -4,7 +4,6 @@ import authReducer from './authReducer'
 import artistsReducer from './artistsReducer'
 import searcherReducer from './searcherReducer'
 
-
 const rootReducer = combineReducers({
   // state: (state = {}) => state
   auth: authReducer,
