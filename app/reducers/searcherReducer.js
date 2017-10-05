@@ -1,4 +1,3 @@
-
 import { List, Map, fromJS } from 'immutable'
 import { SET_INPUT_TEXT } from '../actions/searcher'
 
