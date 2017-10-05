@@ -7,29 +7,29 @@ import spotifyApi from './spoty'
 */
 
 /* Fetch artist using the api return a promise
-* is an action generator using thunks
+* is an action generator using thunks 
 */
-export const FETCH_ARTIST = 'FETCH_ARTIST'
-export const fetchArtist = (artistName) =>  {
+export const START_FETCH_ARTIST = 'START_FETCH_ARTIST'
+export const startFetchArtist = (artistName) =>  {
   return dispatch => {
-    dispatch( requestArtists(artistName) )
+    dispatch( fetchArtists(artistName) )
     return spotifyApi.searchArtists(artistName)
       .then( json => dispatch( receiveArtists(json)) )
       .catch( err => console.log(err) )
   }
 }
 
-/* getArtist and requestArtists are different actions 
-* both plural one using json
+/* Using this inside the start action is the action
+* generated.
 */
-export const REQUEST_ARTISTS ='REQUEST_ARTISTS'
-export const requestArtists = () => {
+export const FETCH_ARTISTS ='FETCH_ARTISTS'
+export const fetchArtists = () => {
   return {
-    type: REQUEST_ARTISTS
+    type: FETCH_ARTISTS
   }
 }
 
-/* Plural */
+/* Plural, used to payload the artist data */
 export const RECEIVE_ARTISTS ='RECEIVE_ARTISTS'
 export const receiveArtists = (json) => {
   return {
@@ -39,13 +39,15 @@ export const receiveArtists = (json) => {
 }
 
 /* get artist details using the id another action 
-* generator using request and get artist actions
-* One artist, non plural
+* generator to start fetching artist info action.
+* One artist, non plural, different info is passed
+* the second fetch is for artist info, which is additional
+* not available directly in the first API call
 */
-export const FETCH_ARTIST_INFO = 'FETCH_ARTIST_INFO'
-export const fetchArtistInfo = (artistId) => {
+export const START_FETCH_ARTIST_INFO = 'START_FETCH_ARTIST_INFO'
+export const startFetchArtistInfo = (artistId) => {
   return dispatch => {
-    dispatch( requestArtistInfo(artistId) )
+    dispatch( fetchArtistInfo(artistId) )
     return spotifyApi.getArtist(artistId)
       .then(json => dispatch( receiveArtistInfo(json) ))
       .catch(err => console.log(err))
@@ -62,9 +64,9 @@ const receiveArtistInfo = (json) => {
 }
 
 /* Single Artist, request info for one (not plural) */
-export const REQUEST_ARTIST_INFO ='REQUEST_ARTIST_INFO'
-export const requestArtistInfo = () => {
+export const FETCH_ARTIST_INFO ='FETCH_ARTIST_INFO'
+export const fetchArtistInfo = () => {
   return {
-    type: REQUEST_ARTIST_INFO
+    type: FETCH_ARTIST_INFO
   }
 }

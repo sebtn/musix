@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-import { fetchArtist } from '../actions/artists'
+import { startFetchArtist } from '../actions/artists'
 import { setSearchText } from '../actions/searcher';
 
 
@@ -15,7 +15,7 @@ class SearchBar extends Component {
   onInputChange = (event) => {
     const {dispatch} = this.props
     dispatch( setSearchText(event.target.value) )
-    dispatch( fetchArtist(this.refs.artistName.value) )
+    dispatch( startFetchArtist(this.refs.artistName.value) )
   }
   
 /*------------------------------------------------------------------*/	
@@ -28,9 +28,9 @@ class SearchBar extends Component {
               placeholder="Type artist name"
               className="form-control"
               onChange={(this.onInputChange)}              
-              ref="artistName"
-						/>
-					</div>
+              ref="artistName" 
+            />
+          </div>
         </div>
     )
   }

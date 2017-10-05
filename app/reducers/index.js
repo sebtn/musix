@@ -1,12 +1,15 @@
 import {combineReducers} from 'redux'
 
 import authReducer from './authReducer'
-import {fetchArtistReducer} from './fetchArtistReducer'
+import artistsReducer from './artistsReducer'
+import searcherReducer from './searcherReducer'
+
 
 const rootReducer = combineReducers({
   // state: (state = {}) => state
   auth: authReducer,
-  // artist: fetchArtistReducer
+  artists: artistsReducer,
+  inputs: searcherReducer
 })
 
 export default rootReducer
