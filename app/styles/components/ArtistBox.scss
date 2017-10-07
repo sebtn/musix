@@ -1,11 +1,32 @@
 .wrapper-box {
-  background-color:#f6f6f6;
-  border-bottom: 1px solid black;
+  margin: 0;
+  padding: 0;
   .card-for-artist {
-    padding: 1em;
-    img {
-      height: 15em;
-      width: 15em;
+    // padding: 0.25em;
+    // border-top: 1px solid #5cb85c;
+    min-width: 100%;
+    min-height: 100%;
+    display:block;
+    // object-fit: cover;
+    .img-wrap {
+      height: 25em;
+      width: 25em;
+      display:block;
+      // object-fit: cover;
+      img {
+        width: 110%;
+        height: 100%;
+        // object-fit: cover;      
+      }
+    }
+    .artist-box {
+      // margin-top: 0.75em;
+      border:1px solid green;
+      background-color: #5cb85c;
+      span {
+        display: flex;
+        padding-left: 0.5em;
+      }
     }
   }  
 }

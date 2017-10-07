@@ -9,18 +9,18 @@ export class ArtistBox extends Component {
   
   renderArtistBox = (data) => {
     const name = data.name ? <h4>{data.name}</h4> : null
-    const popularity = data.popularity ? <h6>{data.popularity}</h6> : null
-    const genre = ( data.genres && data.genres.length > 0) ? <li><span>{data.genres[0]}</span></li> : null
-    const link = data.id ? <Link className="btn btn-default" role="button">Expand info</Link> : null
+    const popularity = data.popularity ? <span>{data.popularity}</span> : <span>Not provided</span> 
+    const genre = ( data.genres && data.genres.length > 0) ? <span>{data.genres[0]}</span> : <span>Not provided</span> 
+    const link = data.id ? <Link  role="button">Expand info</Link> : null
 
     return (
       <div className="artist-box">
         {name}
-        <ul>
-          {popularity}
-          {genre}
-          {link}
-        </ul>
+        <div>
+          <b className="genre">Genres: {genre}</b>
+          <b className="popularity-line">Popularity:{popularity}</b>
+        </div>
+         <button className="btn btn-success btn-lg ">{link}</button> 
       </div>
     )
   } 
@@ -30,8 +30,10 @@ export class ArtistBox extends Component {
     const imageUrl = (artist.images && artist.images.length ? artist.images[0].url : vinyl)
     return (
       <div className="col-md-3 wrapper-box">
-        <div className="card-for-artist">
-          <img src={imageUrl} className="img-from-api" />
+        <div className="card-for-artist center">
+          <div className="img-wrap">
+          <img src={imageUrl} className="img-from-api " />
+          </div>
           {this.renderArtistBox(artist)}
         </div>
       </div>
