@@ -22,7 +22,7 @@ class SearchBar extends Component {
   render() {
     let {artist} = this.props
     return (
-        <div className="col-md-6 search-container">
+        <div className="col-md-3 search-container">
           <div className="form-group">
             <input type="text" 
               placeholder="Type artist name"

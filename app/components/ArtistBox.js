@@ -8,19 +8,19 @@ import {vinyl} from '../vinyl.svg'
 export class ArtistBox extends Component {
   
   renderArtistBox = (data) => {
-    const name = data.name ? <h4>{data.name}</h4> : null
+    const name = data.name ? <h5>{data.name}</h5> : null
     const popularity = data.popularity ? <span>{data.popularity}</span> : <span>Not provided</span> 
     const genre = ( data.genres && data.genres.length > 0) ? <span>{data.genres[0]}</span> : <span>Not provided</span> 
-    const link = data.id ? <Link  role="button">Expand info</Link> : null
+    const link = data.id ? <Link  role="button">See Albums</Link> : null
 
     return (
       <div className="artist-box">
         {name}
-        <div>
+        <div className="titles">
           <b className="genre">Genres: {genre}</b>
           <b className="popularity-line">Popularity:{popularity}</b>
         </div>
-         <button className="btn btn-success btn-lg ">{link}</button> 
+         <button className="btn btn-success btn-lg get-album-btn push-right">{link}</button> 
       </div>
     )
   } 
@@ -29,10 +29,10 @@ export class ArtistBox extends Component {
     const {artist} = this.props
     const imageUrl = (artist.images && artist.images.length ? artist.images[0].url : vinyl)
     return (
-      <div className="col-md-3 wrapper-box">
-        <div className="card-for-artist center">
+      <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12 wrapper-box">
+        <div className="card-for-artist ">
           <div className="img-wrap">
-          <img src={imageUrl} className="img-from-api " />
+          <img src={imageUrl} className="img-from-api img-responsive" />
           </div>
           {this.renderArtistBox(artist)}
         </div>
