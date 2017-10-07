@@ -7,8 +7,6 @@ import {
 } from '../actions'
 
 // /** The initial state; no tokens and no user info */
-// con
-
 const initialState = {
   accessToken: null,
   refreshToken: null,

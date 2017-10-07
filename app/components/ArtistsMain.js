@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 
-import {vinyl} from '../vinyl.svg'
 import {ArtistBox} from './ArtistBox'
 import SearchBar from './SearchBar'
 
