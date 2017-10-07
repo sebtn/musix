@@ -55,13 +55,13 @@ export const startFetchArtistInfo = (artistId) => {
 }
 
 /* Single Artist, receive info for one (not plural) */
-export const RECEIVE_ARTIST_INFO ='RECEIVE_ARTIST_INFO'
-const receiveArtistInfo = (json) => {
-  return {
-    type: RECEIVE_ARTISTS_INFO,
-    artist: json
-  }
-}
+// export const RECEIVE_ARTIST_INFO ='RECEIVE_ARTIST_INFO'
+// const receiveArtistInfo = (json) => {
+//   return {
+//     type: RECEIVE_ARTISTS_INFO,
+//     artist: json
+//   }
+// }
 
 /* Single Artist, request info for one (not plural) */
 export const FETCH_ARTIST_INFO ='FETCH_ARTIST_INFO'

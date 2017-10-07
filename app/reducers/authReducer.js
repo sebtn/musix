@@ -6,12 +6,13 @@ import {
   SPOTIFY_ME_FAILURE
 } from '../actions'
 
-/** The initial state; no tokens and no user info */
+// /** The initial state; no tokens and no user info */
+// con
 
-const initialState = Map({
+const initialState = {
   accessToken: null,
   refreshToken: null,
-  user: Map({
+  auth: {
     loading: false,
     country: null,
     display_name: null,
@@ -24,8 +25,8 @@ const initialState = Map({
     product: null,
     type: null,
     uri: null,
-  })
-})
+  }
+}
 
 function spotifyTokens(state) {
   var newState = Map({
@@ -35,17 +36,17 @@ function spotifyTokens(state) {
   return state.merge(newState)
 }
 
-function spotifyMeBegin(state, user) {
+function spotifyMeBegin(state, auth) {
   var newState = fromJS({
-    user, 
+    auth, 
     loading: true
   })
   return state.merge(newState)  
 }
 
-function spotifyMeSuccess(state, user) {
+function spotifyMeSuccess(state, auth) {
   var newState = fromJS({
-    user, 
+    auth, 
     data,
     loading: false
   })

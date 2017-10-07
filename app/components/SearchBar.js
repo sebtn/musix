@@ -2,17 +2,20 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-import { startFetchArtists } from '../actions/artists'
+import { startFetchArtists, fetchArtists } from '../actions/artists'
 import { setSearchText } from '../actions/searcher'
 
 
 class SearchBar extends Component {
-  
+  constructor(props) {
+    super(props)
+    const {dataType} = this.props
+  }
 /*------------------------------------------------------------------*/
   onInputChange = (event) => {
     const {dispatch} = this.props
     dispatch( setSearchText(event.target.value) )
-    dispatch( startFetchArtists(this.refs.artistName.value) )    
+    dispatch( startFetchArtists(this.refs.artistName.value) )
   }
   
 /*------------------------------------------------------------------*/	

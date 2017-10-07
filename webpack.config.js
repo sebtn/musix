@@ -24,8 +24,9 @@ module.exports = {
         loader: 'style-loader!css-loader!sass-loader'
       },
       { 
-        test: /\.svg$/, loaders: ['raw-loader']
-      },
+        test: /\.svg$/, 
+        loaders: ['raw-loader']
+      }
     ]
   },
   devtool: 'cheap-module-eval-source-map'

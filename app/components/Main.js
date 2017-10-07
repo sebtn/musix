@@ -8,7 +8,7 @@ class Main extends Component {
 
 /*------------------------------------------------------------------*/	
   render() {
-    let {children, artist} = this.props
+    let {children} = this.props
     return (
       <div className="main-container">
         <NavBar   />

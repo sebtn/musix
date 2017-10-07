@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { getMyInfo, setTokens } from '../actions/'
 
-import SearchBar from './SearchBar'
+import ArtistsMain from './ArtistsMain'
 
 class Auth extends Component {
 
@@ -13,14 +13,15 @@ class Auth extends Component {
     setTokens({accessToken, refreshToken})
     getMyInfo()
   } 
-  
+
 /*------------------------------------------------------------------*/	
   render() {
-    const { accessToken, refreshToken, user } = this.props
+    const { accessToken, refreshToken, auth } = this.props
+
     return (
       <div className="auth-container">
         <p>App now using connected to spotify API!</p>
-        <SearchBar />
+        <ArtistsMain />
       </div>
     )
   }
@@ -30,7 +31,7 @@ class Auth extends Component {
 const mapDispatchToProps = dispatch => {
   return {
     setTokens:   bindActionCreators(setTokens, dispatch),
-    getMyInfo:   bindActionCreators(setTokens, dispatch)
+    getMyInfo:   bindActionCreators(setTokens, dispatch),
   }
 }
 

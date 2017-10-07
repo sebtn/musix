@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
 import loginSVG from '../log_in.svg'
 
-/**
- * Our login page
- * Has a login button that hit's the login url
- */
 export default class Login extends Component {
   render() {
     return (

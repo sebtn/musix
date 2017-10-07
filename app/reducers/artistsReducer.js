@@ -13,7 +13,8 @@ import {
 */
 const initialState = Map({
   isFetching: false,
-  items: List(),
+  // artists: Map(),
+  artists: List(),
   details: Map()
 })
 
@@ -28,7 +29,7 @@ const initialState = Map({
 */
 function receiveArtists(state, artists) {
   var newState = fromJS({
-    items: artists, 
+    artists: artists, 
     isFetching: false
   })
   return state.merge(newState)
@@ -71,8 +72,8 @@ function receiveArtistInfo(state, artist) {
 * The state for a particular reducer's starting point. 
 * using an action's starting point state inside, and
 * the type inside the action object.
-*/
-export default function artist(state=initialState, action) {
+// */
+export default function artistsReducer(state=initialState, action) {
   switch(action.type) {
     case RECEIVE_ARTISTS:
       return receiveArtists(state, action.artists)
@@ -81,7 +82,7 @@ export default function artist(state=initialState, action) {
       return fetchArtists(state)
 
     case RECEIVE_ARTIST_INFO:
-      return receiveArtistInfo(state, action.artist)
+      return receiveArtistInfo(state, action.details)
 
     case FETCH_ARTIST_INFO:
      return fetchArtistInfo(state)
