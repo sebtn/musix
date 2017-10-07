@@ -16,7 +16,7 @@ import SearchBar from './SearchBar'
     
     if (artists.items !== undefined) {
       return (
-        <div>
+        <div className="artists-main-container">
           { artists.items.map((artist, index) =>  {
             return <ArtistBox key={index} key={artist.id} artist={artist}/>
           } )} 
