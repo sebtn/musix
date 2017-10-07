@@ -1,46 +1,39 @@
 .wrapper-box {
-  margin: 0;
+  margin-top: 0;
   padding: 0;
+  font-size: 1.25em; 
+  color: #FFFCF9;
+  font-weight: bold;
   .card-for-artist {
     width: auto;
     height: auto;
-    // padding: 0.25em;
-    // border-top: 1px solid #5cb85c;
-    // min-width: 100%;
-    // min-height: 100%;
-    // display:block;
     .img-wrap {
-      // text-align:center;
-      // height: 25em;
-      // width: 30em;
-      // width: 100%;
-      // height: 100%;
-      // display:block;
       img {
       height: 24em;
       width: 100%;
-      // width:100%;
-      // height:auto;
+      border: 1.75px solid #FFFCF9;
       }
     }
     .artist-box {
-      // margin-top: 0.75em;
-      border:1px solid green;
-      // background-color: #5cb85c;
-      background-color: #4F9D67;
-      span {
+      background-color: #26547C;
+      text-align: center;
+      span  {
         text-align: center;
         display: flex;
         padding: 0.75em;
+        font-size: 1.25em;   
       }
       .titles {
-        text-align:center;      
+        text-align:left;
       }
       .get-album-btn {
-        // border: 1px solid black;
         border-radius: 0px;
-        margin-bottom: 0.25em;
-        margin-left: 0.25em;
+        margin: 1.25em 0.5em;
+        background-color: #FFD166;
+        font-size: 1.15em;
+        font-weight: bold;
+        color: #26547C;
+        opacity: 0.75;
       }
     }
   }  

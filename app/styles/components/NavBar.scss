@@ -1,6 +1,10 @@
 .nav-container {
-  background-color: #d1d1d1;
-  a {
+  background-color: #FFD166;
+  min-height: 8em;
+  text-align: center;
+  nav {
     margin: 1em;
+    display: inline-block;
+    text-align:center; 
   } 
 }

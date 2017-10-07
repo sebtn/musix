@@ -8,7 +8,7 @@ import {vinyl} from '../vinyl.svg'
 export class ArtistBox extends Component {
   
   renderArtistBox = (data) => {
-    const name = data.name ? <h5>{data.name}</h5> : null
+    const name = data.name ? <h3>{data.name}</h3> : null
     const popularity = data.popularity ? <span>{data.popularity}</span> : <span>Not provided</span> 
     const genre = ( data.genres && data.genres.length > 0) ? <span>{data.genres[0]}</span> : <span>Not provided</span> 
     const link = data.id ? <Link  role="button">See Albums</Link> : null
@@ -17,10 +17,10 @@ export class ArtistBox extends Component {
       <div className="artist-box">
         {name}
         <div className="titles">
-          <b className="genre">Genres: {genre}</b>
-          <b className="popularity-line">Popularity:{popularity}</b>
+          {/* <b className="genre">Genres: {genre}</b>
+          <b className="popularity-line">Popularity:{popularity}</b> */}
         </div>
-         <button className="btn btn-success btn-lg get-album-btn push-right">{link}</button> 
+         <button className="btn btn-lg get-album-btn">{link}</button> 
       </div>
     )
   } 

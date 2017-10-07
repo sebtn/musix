@@ -3,7 +3,9 @@
 @import './components/ArtistBox';
 @import './components/ArtistsMain';
 @import './components/SearchBar';
-body { height:100%; }
+@import './components/Auth';
+
+body { height:100%; color: #333}
 #app div{ height:100%; color: #333  }
 
 

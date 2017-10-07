@@ -1,6 +1,7 @@
 .search-container {
-  margin:1em;
-	padding:1em;
+  height:5em;
+  margin: auto;
+  width:50%;
 	::-webkit-input-placeholder { /* WebKit, Blink, Edge */
 	    color: $placeholder-letter;
 	}
@@ -18,22 +19,18 @@
 	::-ms-input-placeholder { /* Microsoft Edge */
 	   color: $placeholder-letter;
 	}
-	& .form-group{
-		width: 100%;
-  }
   & .form-group{
-		width: 100%;
+    width: 100%;
 	}
 	& .form-control {
-		margin: 1.25rem 0;
 		outline: none;
 		-webkit-box-shadow: 0 4px 6px -6px $box-shadow-border;
 		-moz-box-shadow: 0 4px 6px -6px $box-shadow-border;
 		box-shadow: 0 4px 6px -6px $box-shadow-border;
 		border: 0;
-		border-bottom: 1px solid $placeholder-letter;
-		min-height: 2.75rem;
-		font-size: 1.5rem;
+		border-bottom: 4.25px solid $placeholder-letter;
+		min-height: 3.75rem;
+		font-size: 2.5rem;
 			& focus {
 				outline: none;
 				-webkit-box-shadow: 0 4px 6px -6px $box-shadow-border;
