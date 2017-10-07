@@ -32,22 +32,23 @@
 │   │       ├── ArtistBox.scss
 │   │       ├── ArtistsMain.scss
 │   │       ├── Auth.scss
+│   │       ├── Login.scss
 │   │       ├── NavBar.scss
 │   │       └── SearchBar.scss
-│   ├── tests
-│   │   └── components
-│   │       └── test_index.js
-│   └── vinyl.svg
+│   └── tests
+│       └── components
+│           └── test_index.js
 ├── appTree.js
 ├── config.js
 ├── karma.conf.js
 ├── package.json
 ├── public
 │   ├── bundle.js
+│   ├── c487d76eac0a8c48626aa1eade40ec34.png
 │   └── index.html
 ├── README.md
 ├── routes.js
 ├── server.js
 └── webpack.config.js
 
-11 directories, 39 files
+11 directories, 40 files

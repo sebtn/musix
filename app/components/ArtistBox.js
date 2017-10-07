@@ -14,11 +14,7 @@ export class ArtistBox extends Component {
     return (
       <div className="artist-box">
         {name}
-        <div className="titles">
-          {/* <b className="genre">Genres: {genre}</b>
-          <b className="popularity-line">Popularity:{popularity}</b> */}
-        </div>
-         <button className="btn btn-lg get-album-btn">{link}</button> 
+        <button className="btn btn-lg get-album-btn">{link}</button> 
       </div>
     )
   } 
