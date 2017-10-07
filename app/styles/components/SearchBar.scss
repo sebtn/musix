@@ -18,15 +18,20 @@
 	}
 	::-ms-input-placeholder { /* Microsoft Edge */
 	   color: $placeholder-letter;
-	}
+  }
+  & input[type='text'] { 
+    font-family: "Lucida Console", Monaco, monospace;
+  }
   & .form-group{
+    background-color: #FFFCF9;    
     width: 100%;
 	}
 	& .form-control {
+    background-color: #FFFCF9;        
 		outline: none;
-		-webkit-box-shadow: 0 4px 6px -6px $box-shadow-border;
-		-moz-box-shadow: 0 4px 6px -6px $box-shadow-border;
-		box-shadow: 0 4px 6px -6px $box-shadow-border;
+		-webkit-box-shadow: 0 4px 8px -6px $box-shadow-border;
+		-moz-box-shadow: 0 4px 8px -6px $box-shadow-border;
+		box-shadow: 0 4px 8px -6px $box-shadow-border;
 		border: 0;
 		border-bottom: 4.25px solid $placeholder-letter;
 		min-height: 3.75rem;

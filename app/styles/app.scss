@@ -5,8 +5,13 @@
 @import './components/SearchBar';
 @import './components/Auth';
 
-body { height:100%; color: #333}
-#app div{ height:100%; color: #333  }
+body { 
+  height:100%; 
+  color: #333;
+  font-family: "Lucida Console", Monaco, monospace;  
+  background-color: #FFFCF9;
+}
+
 
 
 

@@ -20,7 +20,7 @@ class Auth extends Component {
 
     return (
       <div className="auth-container">
-        <p>App now using connected to spotify API!</p>
+        <p>App now connected to spotify API!</p>
         <ArtistsMain />
       </div>
     )

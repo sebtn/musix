@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {Router, Link} from 'react-router'
 
-import {vinyl} from '../vinyl.svg'
-
 export class ArtistBox extends Component {
   
   renderArtistBox = (data) => {
@@ -27,7 +25,7 @@ export class ArtistBox extends Component {
 
   render () {
     const {artist} = this.props
-    const imageUrl = (artist.images && artist.images.length ? artist.images[0].url : vinyl)
+    const imageUrl = (artist.images && artist.images.length ? artist.images[0].url : 'https://s3.amazonaws.com/sebimages/score-placeholder.png')
     return (
       <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12 wrapper-box">
         <div className="card-for-artist ">
