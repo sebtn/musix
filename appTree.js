@@ -7,8 +7,8 @@
 │   │   └── spoty.js
 │   ├── app.js
 │   ├── components
-│   │   ├── Artist.js
-│   │   ├── ArtistList.js
+│   │   ├── ArtistBox.js
+│   │   ├── ArtistsMain.js
 │   │   ├── Auth.js
 │   │   ├── Error.js
 │   │   ├── Login.js
@@ -29,10 +29,15 @@
 │   │   │   ├── _core.scss
 │   │   │   └── _variables.scss
 │   │   └── components
-│   │       └── NavBar.scss
-│   └── tests
-│       └── components
-│           └── test_index.js
+│   │       ├── ArtistBox.scss
+│   │       ├── ArtistsMain.scss
+│   │       ├── Auth.scss
+│   │       ├── NavBar.scss
+│   │       └── SearchBar.scss
+│   ├── tests
+│   │   └── components
+│   │       └── test_index.js
+│   └── vinyl.svg
 ├── appTree.js
 ├── config.js
 ├── karma.conf.js
@@ -45,4 +50,4 @@
 ├── server.js
 └── webpack.config.js
 
-11 directories, 34 files
+11 directories, 39 files
