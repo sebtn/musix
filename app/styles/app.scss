@@ -2,12 +2,8 @@
 @import './components/NavBar';
 @import './components/ArtistBox';
 @import './components/ArtistsMain';
-body{
-  height:100%
- }
- 
- #app div{
- height:100%
- }
+@import './components/SearchBar';
+body { height:100% }
+#app div{ height:100% }
 
 
