@@ -1,5 +1,5 @@
 import spotifyApi from './spoty'
-
+import {debounce} from 'lodash'
 /* Take data info for further use 
 * create something that can hold the info needed
 * passing it through the reducer and then print it.
@@ -14,8 +14,8 @@ export const startFetchArtists = (artistName) =>  {
   return dispatch => {
     dispatch( fetchArtists(artistName) )
     return spotifyApi.searchArtists(artistName)
-      .then( json => dispatch( receiveArtists(json)) )
-      .catch( err => console.log(err) )
+    .then( json => dispatch( receiveArtists(json)) )
+    .catch( err => console.log(err) )
   }
 }
 
@@ -55,13 +55,13 @@ export const startFetchArtistInfo = (artistId) => {
 }
 
 /* Single Artist, receive info for one (not plural) */
-// export const RECEIVE_ARTIST_INFO ='RECEIVE_ARTIST_INFO'
-// const receiveArtistInfo = (json) => {
-//   return {
-//     type: RECEIVE_ARTISTS_INFO,
-//     artist: json
-//   }
-// }
+export const RECEIVE_ARTIST_INFO ='RECEIVE_ARTIST_INFO'
+const receiveArtistInfo = (json) => {
+  return {
+    type: RECEIVE_ARTISTS_INFO,
+    artist: json
+  }
+}
 
 /* Single Artist, request info for one (not plural) */
 export const FETCH_ARTIST_INFO ='FETCH_ARTIST_INFO'

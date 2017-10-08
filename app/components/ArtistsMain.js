@@ -8,11 +8,9 @@ import SearchBar from './SearchBar'
  export class ArtistsMain extends Component {
   
   renderArtists = () => {
-    const piece = 5
     const {dispatch} = this.props
     const {artists} = this.props.artists
     const {input} = this.props.inputs
-    let result = []
     
     if (artists.items !== undefined) {
       return (
@@ -29,7 +27,7 @@ import SearchBar from './SearchBar'
   render() {
     return (
       <div className="artists-main-box">
-        <SearchBar />
+        <SearchBar  />
         {this.renderArtists()}
       </div>
     )

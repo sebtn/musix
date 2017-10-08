@@ -90,7 +90,8 @@ export class ArtistBox extends Component {
     const noneStar   = ( data.popularity >= 80 && data.popularity < 100 ) ? <span>{this.renderNoneEmptyStars()}</span>  : null
     
     const genre = ( data.genres && data.genres.length > 0) ? <span>{data.genres[0]}</span> : <span>Not provided</span> 
-    const link = data.id ? <Link role="button">See Albums</Link> : null
+    const link = data.id ? <Link to={`/user/:accessToken/:refreshToken/albums`} role="button">See Albums</Link> : null
+    // const link = data.id ? <Link to={`/artists/${data.id}/albums`} role="button">See Albums</Link> : null
 
     return (
       <div className="artist-box">
@@ -123,6 +124,3 @@ export class ArtistBox extends Component {
 
 export default connect(state => state)(ArtistBox)
 
-FontAwesome.propTypes = {
-  name: PropTypes.string.isRequired
-}

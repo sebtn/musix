@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { getMyInfo, setTokens } from '../actions/'
+import {Router, Link} from 'react-router'
 
 import ArtistsMain from './ArtistsMain'
 
@@ -21,7 +22,8 @@ class Auth extends Component {
     return (
       <div className="auth-container">
         <p>App now connected to spotify API!</p>
-        <ArtistsMain />
+        <Link to={`/artists`} role="button">See Albums</Link>
+{/*        <ArtistsMain />*/}
       </div>
     )
   }

@@ -5,7 +5,6 @@ import { bindActionCreators } from 'redux'
 import { startFetchArtists, fetchArtists } from '../actions/artists'
 import { setSearchText } from '../actions/searcher'
 
-
 class SearchBar extends Component {
   constructor(props) {
     super(props)
