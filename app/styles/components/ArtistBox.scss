@@ -1,3 +1,4 @@
+
 .wrapper-box {
   margin-top: 0;
   padding: 0;
@@ -34,6 +35,13 @@
         font-weight: bold;
         color: #26547C;
         opacity: 0.75;
+      }
+      .one-to-twenty, .zero, 
+      .twenty-to-forty, 
+      .forty-to-sixty, 
+      .sixty-to-eigthty,
+      .eigthty-plus {
+        display: inline-flex;
       }
     }
   }  
