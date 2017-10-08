@@ -6,14 +6,21 @@ import {Router, Link} from 'react-router'
 export class ArtistBox extends Component {
   
   renderArtistBox = (data) => {
-    const name = data.name ? <h3>{data.name}</h3> : null
-    const popularity = data.popularity ? <span>{data.popularity}</span> : <span>Not provided</span> 
+    const name = data.name ? <span>Artist: {data.name}</span> : null
+    const popularity = data.popularity ? <span>Popularity: {data.popularity}</span> : <span>Not provided</span> 
+
+    // const stars =  (10 > data.popularity > 100 )  ? <p><span class="glyphicon glyphicon-star"></span> </p> : ''
+  
+
     const genre = ( data.genres && data.genres.length > 0) ? <span>{data.genres[0]}</span> : <span>Not provided</span> 
-    const link = data.id ? <Link  role="button">See Albums</Link> : null
+    const link = data.id ? <Link role="button">See Albums</Link> : null
 
     return (
       <div className="artist-box">
-        {name}
+        {name} 
+        {popularity}
+        {/* {stars} */}
+        <p><span className="glyphicon glyphicon-star"></span> </p>
         <button className="btn btn-lg get-album-btn">{link}</button> 
       </div>
     )

@@ -28,7 +28,7 @@ module.exports = {
         loaders: ['raw-loader']
       },
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(jpg|png|jpeg|svg|ttf|woff|woff2|eot)(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'url-loader!file-loader',
       }
     ]

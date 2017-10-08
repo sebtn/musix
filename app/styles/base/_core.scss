@@ -19,3 +19,9 @@
 
 /* From utilities  */
 @import "../../node_modules/bootstrap/scss/utilities/flex";
+
+/*Font Awesome*/
+$fa-css-prefix: 'fa';
+@import '~font-awesome/scss/variables';
+@import '~font-awesome/scss/core';
+@import '~font-awesome/scss/icons';

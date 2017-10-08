@@ -5,7 +5,7 @@ import {connect} from 'react-redux'
 const NavBar = () => (
   <div className="nav-container">
     <nav className="nav">
-      <h1>Spotify searcher in React-Redux style</h1>
+      <h1>Spotify API artists browser</h1>
     </nav>
   </div>
 )
