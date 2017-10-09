@@ -1,16 +1,18 @@
 .jumbotron {
-  padding: 1.25rem;
+  padding: 1.75rem;
   background-color: #26547C;
   opacity: 0.75;
   color: #FFFCF9;
-  margin-top: 3.5rem;
-  margin-bottom: 3.5rem;
+  /*margin-top: 3.5rem;*/
+  margin-bottom: 1.5rem;
   min-height: 15rem;
   .title {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .lead {
-    margin-top : 1rem;
-    line-height: 2.5rem;
+    padding: 3.5rem 1rem;
+    line-height: 2.75rem;
+    width: 85%;
+    margin: auto;
   }
 }

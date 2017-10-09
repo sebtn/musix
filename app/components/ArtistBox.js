@@ -9,7 +9,7 @@ export class ArtistBox extends Component {
   renderFiveEmptyStars = () => {
     return (
       <div className="zero">
-        <FontAwesome className='fa fa-star-o'  /> 
+        <FontAwesome className='fa fa-star-o' /> 
         <FontAwesome className='fa fa-star-o' />
         <FontAwesome className='fa fa-star-o' />
         <FontAwesome className='fa fa-star-o' />
@@ -21,7 +21,7 @@ export class ArtistBox extends Component {
   renderFourEmptyStars = () => {
     return (
       <div className="one-to-twenty">
-        <FontAwesome className='fa fa-star' /> 
+        <FontAwesome className='fa fa-star'   /> 
         <FontAwesome className='fa fa-star-o' />
         <FontAwesome className='fa fa-star-o' />
         <FontAwesome className='fa fa-star-o' />
@@ -33,8 +33,8 @@ export class ArtistBox extends Component {
   renderThreeEmptyStars = () => {
     return (
       <div className="twenty-to-forty">
-        <FontAwesome className='fa fa-star' /> 
-        <FontAwesome className='fa fa-star' />
+        <FontAwesome className='fa fa-star'   /> 
+        <FontAwesome className='fa fa-star'   />
         <FontAwesome className='fa fa-star-o' />
         <FontAwesome className='fa fa-star-o' />
         <FontAwesome className='fa fa-star-o' /> 
@@ -45,9 +45,9 @@ export class ArtistBox extends Component {
   renderTwoEmptyStars = () => {
     return (
       <div className="forty-to-sixty">
-        <FontAwesome className='fa fa-star' /> 
-        <FontAwesome className='fa fa-star' />
-        <FontAwesome className='fa fa-star' />
+        <FontAwesome className='fa fa-star'   /> 
+        <FontAwesome className='fa fa-star'   />
+        <FontAwesome className='fa fa-star'   />
         <FontAwesome className='fa fa-star-o' />
         <FontAwesome className='fa fa-star-o' /> 
       </div>
@@ -57,10 +57,10 @@ export class ArtistBox extends Component {
   renderOneEmptyStars = () => {
     return (
       <div className="sixty-to-eigthty">
-        <FontAwesome className='fa fa-star' /> 
-        <FontAwesome className='fa fa-star' />
-        <FontAwesome className='fa fa-star' />
-        <FontAwesome className='fa fa-star' />
+        <FontAwesome className='fa fa-star'   /> 
+        <FontAwesome className='fa fa-star'   />
+        <FontAwesome className='fa fa-star'   />
+        <FontAwesome className='fa fa-star'   />
         <FontAwesome className='fa fa-star-o' /> 
       </div>
     )
@@ -82,7 +82,7 @@ export class ArtistBox extends Component {
     const name = data.name ? <span>Artist: {data.name}</span> : null
 
     const stars      = ( data.popularity === 0  ) ? <span> {this.renderFiveEmptyStars()} </span> : null
-    const fourStars  = ( data.popularity > -1 && data.popularity < 20 )   ? <span>{this.renderFourEmptyStars()}</span>  : null
+    const fourStars  = ( data.popularity > -1  && data.popularity < 20 )  ? <span>{this.renderFourEmptyStars()}</span>  : null
     const threeStars = ( data.popularity >= 20 && data.popularity < 40 )  ? <span>{this.renderThreeEmptyStars()}</span> : null
     const twoStars   = ( data.popularity >= 40 && data.popularity < 60 )  ? <span>{this.renderTwoEmptyStars()}</span>   : null
     const oneStar    = ( data.popularity >= 60 && data.popularity < 80 )  ? <span>{this.renderOneEmptyStars()}</span>   : null
@@ -90,7 +90,6 @@ export class ArtistBox extends Component {
     
     const genre = ( data.genres && data.genres.length > 0) ? <span>{data.genres[0]}</span> : <span>Not provided</span> 
     const link = data.id ? <Link to={`/albums`} role="button">See Albums</Link> : null
-    // const link = data.id ? <Link to={`/artists/${data.id}/albums`} role="button">See Albums</Link> : null
 
     return (
       <div className="artist-box">
@@ -107,7 +106,9 @@ export class ArtistBox extends Component {
 
   render () {
     const {artist} = this.props
-    const imageUrl = (artist.images && artist.images.length ? artist.images[0].url : 'https://s3.amazonaws.com/sebimages/score-placeholder.png')
+    const imageUrl = (artist.images && artist.images.length ? 
+      artist.images[0].url : 'https://s3.amazonaws.com/sebimages/score-placeholder.png')
+
     return (
       <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12 wrapper-box">
         <div className="card-for-artist ">
