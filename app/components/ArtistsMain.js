@@ -1,9 +1,11 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
+import {Link} from 'react-router'
 
 import {ArtistBox} from './ArtistBox'
 import SearchBar from './SearchBar'
+import BackToLoginButton from './BackToLoginButton' 
 
  export class ArtistsMain extends Component {
   
@@ -27,6 +29,9 @@ import SearchBar from './SearchBar'
   render() {
     return (
       <div className="artists-main-box">
+        <Link to="/" className="btn btn-xs back" role="button" >
+           Take me back 
+         </Link>
         <SearchBar  />
         {this.renderArtists()}
       </div>
@@ -39,7 +44,6 @@ const mapStateToProps = state => {
   return {
     artists: artists.toJS(),
     inputs: inputs.toJS()
-
   }
 }
 

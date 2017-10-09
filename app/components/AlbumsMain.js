@@ -1,15 +1,13 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
+import {Link} from 'react-router'
 
-import SearchBar from './SearchBar'
-
- export class Albums extends Component {
+ export class AlbumsMain extends Component {
   
-  renderArtists = () => {
+  renderAlbums = () => {
     const {dispatch} = this.props
     const {albums} = this.props.albums
-    // const {input} = this.props.inputs
     
     if (albums.items !== undefined) {
       return (
@@ -25,8 +23,13 @@ import SearchBar from './SearchBar'
   /*------------------------------------------------------------------------------------ */
   render() {
     return (
-      <div className="almbums-main-box">
-        {/*<SearchBar  />*/}
+      <div className="albums-main-box">
+        <Link to="/" className="btn btn-xs back-login" role="button" >
+           Take me back to login
+         </Link>
+         <Link to="/artists" className="btn btn-xs back-art" role="button" >
+           Take me back to artists
+         </Link>
         <h1 className="albums-title">This is albums</h1>
       </div>
     )
@@ -37,8 +40,7 @@ const mapStateToProps = state => {
   const {albums, inputs} = state
   return {
     albums: albums.toJS(),
-    // inputs: inputs.toJS()
   }
 }
 
-export default connect(mapStateToProps)(Albums)
+export default connect(mapStateToProps)(AlbumsMain)
