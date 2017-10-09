@@ -3,23 +3,30 @@ import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {Link} from 'react-router'
 
+import { startFetchArtistAlbums } from '../actions/albums'
+
  export class AlbumsMain extends Component {
   
-  renderAlbums = () => {
+  componentDidMount = () => {
     const {dispatch} = this.props
-    const {albums} = this.props.albums
+    const {artists} = this.props.artists
+    // const {input} = this.props
+    // dispatch( startFetchArtistAlbums() )
+    console.log(this.props)
     
-    if (albums.items !== undefined) {
-      return (
-        <div className="albums-main-container">
-          { albums.items.map((artist, index) =>  {
-            /*return <ArtistBox key={index} key={artist.id} artist={artist}/>*/
-          } )} 
-        </div>
-      )
-    }
-    
+    // artists.items.map((el, index) => {
+      // return console.log(el.id)
+    // })
   }
+
+  renderAlbums = () => {
+      // return ( 
+      //   <div>
+      //     {console.log(artists)}
+      //   </div>
+      // )
+    }
+  
   /*------------------------------------------------------------------------------------ */
   render() {
     return (
@@ -31,15 +38,18 @@ import {Link} from 'react-router'
            Take me back to artists
          </Link>
         <h1 className="albums-title">This is albums</h1>
+        {this.renderAlbums()}
       </div>
     )
   }
  }
 
 const mapStateToProps = state => {
-  const {albums, inputs} = state
+  const {albums, inputs, artists} = state
   return {
     albums: albums.toJS(),
+    artists: artists.toJS(),
+    inputs: inputs.toJS()
   }
 }
 

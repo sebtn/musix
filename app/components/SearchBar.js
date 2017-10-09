@@ -13,8 +13,10 @@ class SearchBar extends Component {
 /*------------------------------------------------------------------*/
   onInputChange = (event) => {
     const {dispatch} = this.props
-    dispatch( setSearchText(event.target.value) )
-    dispatch( startFetchArtists(this.refs.artistName.value) )
+    if (event.target.value.length  > 0) {
+      dispatch( setSearchText(event.target.value) )
+      dispatch( startFetchArtists(this.refs.artistName.value) )
+    }
   }
   
 /*------------------------------------------------------------------*/	
@@ -36,5 +38,12 @@ class SearchBar extends Component {
 }
 
 /*------------------------------------------------------------ */
-export default connect()(SearchBar)
+const mapStateToProps = state => {
+  const {inputs} = state
+  return {
+    // artists: artists.toJS(),
+    inputs: inputs.toJS()
+  }
+}
+export default connect(mapStateToProps)(SearchBar)
 

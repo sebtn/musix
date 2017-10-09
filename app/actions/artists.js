@@ -13,7 +13,7 @@ export const START_FETCH_ARTISTS = 'START_FETCH_ARTISTS'
 export const startFetchArtists = (artistName) =>  {
   return dispatch => {
     dispatch( fetchArtists(artistName) )
-    return spotifyApi.searchArtists(artistName)
+    return spotifyApi.searchArtists(artistName, {limit: 8})
     .then( json => dispatch( receiveArtists(json)) )
     .catch( err => console.log(err) )
   }

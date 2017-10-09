@@ -5,7 +5,6 @@ import {Link} from 'react-router'
 
 import {ArtistBox} from './ArtistBox'
 import SearchBar from './SearchBar'
-import BackToLoginButton from './BackToLoginButton' 
 
  export class ArtistsMain extends Component {
   
@@ -23,7 +22,6 @@ import BackToLoginButton from './BackToLoginButton'
         </div>
       )
     }
-    
   }
   /*------------------------------------------------------------------------------------ */
   render() {

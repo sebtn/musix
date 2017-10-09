@@ -4,8 +4,7 @@ import {connect} from 'react-redux'
 import {Router, Link} from 'react-router'
 import FontAwesome from 'react-fontawesome'
 
-export class ArtistBox extends Component {
-  
+export class ArtistBox extends Component {  
 
   renderFiveEmptyStars = () => {
     return (
@@ -122,5 +121,5 @@ export class ArtistBox extends Component {
   }
 }
 
-export default connect(state => state)(ArtistBox)
+export default connect()(ArtistBox)
 
