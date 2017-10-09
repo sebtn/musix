@@ -11,7 +11,7 @@ class Main extends Component {
     let {children} = this.props
     return (
       <div className="main-container">
-        <NavBar   />
+        <NavBar />
         {children}
       </div>
     )

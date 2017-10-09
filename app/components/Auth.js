@@ -4,6 +4,8 @@ import { bindActionCreators } from 'redux'
 import { getMyInfo, setTokens } from '../actions/'
 import {Router, Link} from 'react-router'
 
+import Jumbotron from './Jumbotron'
+
 class Auth extends Component {
 
   componentDidMount() {
@@ -19,8 +21,10 @@ class Auth extends Component {
 
     return (
       <div className="auth-container">
-        <p>App now connected to spotify API!</p>
-        <Link to={`/artists`} role="button">Click here to begin browsing</Link>
+        <Jumbotron />
+        <Link to={`/artists`} role="button" className="letters">
+          Begin Here!
+        </Link>
       </div>
     )
   }

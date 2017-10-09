@@ -28,7 +28,7 @@ import SearchBar from './SearchBar'
     return (
       <div className="artists-main-box">
         <Link to="/" className="btn btn-xs back" role="button" >
-           Take me back 
+           Back to login
          </Link>
         <SearchBar  />
         {this.renderArtists()}

@@ -1,5 +1,10 @@
 .auth-container {
   background-color: #FFFCF9;
   margin:auto;
-  width: 95%;
+  width: 100%;
+  .letters {
+    font-size: 1.5rem;
+    margin: 1.5rem;
+    padding: 0.5rem;
+  }
 }

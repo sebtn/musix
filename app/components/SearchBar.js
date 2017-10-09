@@ -41,7 +41,6 @@ class SearchBar extends Component {
 const mapStateToProps = state => {
   const {inputs} = state
   return {
-    // artists: artists.toJS(),
     inputs: inputs.toJS()
   }
 }

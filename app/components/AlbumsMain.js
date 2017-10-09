@@ -32,10 +32,10 @@ import { startFetchArtistAlbums } from '../actions/albums'
     return (
       <div className="albums-main-box">
         <Link to="/" className="btn btn-xs back-login" role="button" >
-           Take me back to login
+           Back to login
          </Link>
          <Link to="/artists" className="btn btn-xs back-art" role="button" >
-           Take me back to artists
+           Back to artists
          </Link>
         <h1 className="albums-title">This is albums</h1>
         {this.renderAlbums()}
