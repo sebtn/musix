@@ -4,7 +4,6 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router'
 
 import { startFetchArtistAlbums } from '../actions/albums'
-import {startFetchArtists, startFetchArtistInfo} from '../actions/artists'
 
  export class AlbumsMain extends Component {
   constructor(props) {
@@ -14,7 +13,6 @@ import {startFetchArtists, startFetchArtistInfo} from '../actions/artists'
     const {id}  = this.props.params
     const {dispatch} = this.props
      dispatch( startFetchArtistAlbums(id) )
-     dispatch( startFetchArtistInfo(id) )
   }
 
   renderAlbums = () => {  }

@@ -35,34 +35,3 @@ export const receiveArtists = (json) => {
     artists: json.artists
   }
 }
-
-/* get artist details using the id another action 
-* generator to start fetching artist info action.
-* One artist, non plural, different info is passed
-* the second fetch is for artist info, which is additional
-* not available directly in the first API call
-*/
-export const START_FETCH_ARTIST_INFO = 'START_FETCH_ARTIST_INFO'
-export const startFetchArtistInfo = (artistId) => dispatch => {
-    dispatch( fetchArtistInfo(artistId) )
-    return spotifyApi.getArtist(artistId)
-      .then(json => dispatch( receiveArtistInfo(json) ))
-      .catch(err => console.log(err))
-}
-
-/* Single Artist, receive info for one (not plural) */
-export const RECEIVE_ARTIST_INFO ='RECEIVE_ARTIST_INFO'
-const receiveArtistInfo = (json) => {
-  return {
-    type: RECEIVE_ARTIST_INFO,
-    artist: json
-  }
-}
-
-/* Single Artist, request info for one (not plural) */
-export const FETCH_ARTIST_INFO ='FETCH_ARTIST_INFO'
-export const fetchArtistInfo = () => {
-  return {
-    type: FETCH_ARTIST_INFO
-  }
-}

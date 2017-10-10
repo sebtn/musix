@@ -2,8 +2,6 @@ import { List, Map, fromJS } from 'immutable'
 import { 
   FETCH_ARTISTS,
   RECEIVE_ARTISTS,
-  RECEIVE_ARTIST_INFO,
-  FETCH_ARTIST_INFO 
 } from '../actions/artists'
 
 /* Initial state object will have this shape.
@@ -14,7 +12,6 @@ import {
 const initialState = Map({
   isFetching: false,
   artists: List(),
-  details: Map()
 })
 
 /* Gets a list from API completed request
@@ -45,26 +42,6 @@ function fetchArtists(state) {
   return state.merge(newState)
 }
 
-function fetchArtistInfo(state) {
-  let newState = Map({
-    isFetching: true
-  })
-  return state.merge(newState)  
-}
-
-/* On single artist info comes from the API 
-* return a new state with the details field
-* set to such info.
-* The current state is used to generate a new one.
-* The fromJS provides the deep conversion for the Objects  
-*/
-function receiveArtistInfo(state, artist) {
-  var newState = fromJS({
-    details: artist, 
-    isFetching: false
-  })
-  return state.merge(newState)
-}
 
 /*Main reducer: reduces the state using a store registered
 * action XOR the same state it got passed along.
@@ -79,12 +56,6 @@ export default function artistsReducer(state=initialState, action) {
 
     case FETCH_ARTISTS: 
       return fetchArtists(state)
-
-    case RECEIVE_ARTIST_INFO:
-      return receiveArtistInfo(state, action.details)
-
-    case FETCH_ARTIST_INFO:
-     return fetchArtistInfo(state)
 
     default:
       return state 
