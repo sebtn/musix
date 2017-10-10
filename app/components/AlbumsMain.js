@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {Link} from 'react-router'
-import { bindActionCreators } from 'redux'
 
 import { startFetchArtistAlbums } from '../actions/albums'
 import {startFetchArtists, startFetchArtistInfo} from '../actions/artists'
@@ -25,11 +24,14 @@ import {startFetchArtists, startFetchArtistInfo} from '../actions/artists'
     return (
       <div className="albums-main-box">
         <Link to="/" className="btn btn-xs back-login" role="button" >
-           Back to login
-         </Link>
-         <Link to="/artists" className="btn btn-xs back-art" role="button" >
-           Back to artists
-         </Link>
+          Back to login
+        </Link>
+        <Link to="/artists" className="btn btn-xs back-art" role="button" >
+          Back to artists
+        </Link>
+        <Link to="/tracks" className="btn btn-xs back-art" role="button" >
+          FF to tracks
+        </Link>
         <h1 className="albums-title">This is albums</h1>
       </div>
     )
