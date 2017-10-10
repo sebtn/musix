@@ -10,13 +10,11 @@ import {debounce} from 'lodash'
 * is an action generator using thunks 
 */
 export const START_FETCH_ARTISTS = 'START_FETCH_ARTISTS'
-export const startFetchArtists = (artistName) =>  {
-  return dispatch => {
+export const startFetchArtists = artistName => dispatch =>  {
     dispatch( fetchArtists(artistName) )
     return spotifyApi.searchArtists(artistName, {limit: 8})
     .then( json => dispatch( receiveArtists(json)) )
     .catch( err => console.log(err) )
-  }
 }
 
 /* Using this inside the start action is the action
@@ -45,20 +43,18 @@ export const receiveArtists = (json) => {
 * not available directly in the first API call
 */
 export const START_FETCH_ARTIST_INFO = 'START_FETCH_ARTIST_INFO'
-export const startFetchArtistInfo = (artistId) => {
-  return dispatch => {
+export const startFetchArtistInfo = (artistId) => dispatch => {
     dispatch( fetchArtistInfo(artistId) )
     return spotifyApi.getArtist(artistId)
       .then(json => dispatch( receiveArtistInfo(json) ))
       .catch(err => console.log(err))
-  }
 }
 
 /* Single Artist, receive info for one (not plural) */
 export const RECEIVE_ARTIST_INFO ='RECEIVE_ARTIST_INFO'
 const receiveArtistInfo = (json) => {
   return {
-    type: RECEIVE_ARTISTS_INFO,
+    type: RECEIVE_ARTIST_INFO,
     artist: json
   }
 }

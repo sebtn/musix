@@ -15,7 +15,7 @@ export default (
       <Route path="/user/:accessToken/:refreshToken" component={Auth} />
       <Route path="/error/:errorMsg" component={Error} />
       <Route path="artists" component={ArtistsMain} />
-      <Route path="albums" component={AlbumsMain} />
+      <Route path="artist/:id" component={AlbumsMain} />
     </Route>
   </Router>
 )

@@ -3,6 +3,12 @@ import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {Router, Link} from 'react-router'
 import FontAwesome from 'react-fontawesome'
+import { bindActionCreators } from 'redux'
+
+
+import { startFetchArtistAlbums } from '../actions/albums'
+import {startFetchArtists} from '../actions/artists'
+
 
 export class ArtistBox extends Component {  
 
@@ -78,7 +84,9 @@ export class ArtistBox extends Component {
     )
   }
 
+
   renderArtistBox = (data) => {
+    const {onClick} = this.props 
     const name = data.name ? <span>Artist: {data.name}</span> : null
 
     const stars      = ( data.popularity === 0  ) ? <span> {this.renderFiveEmptyStars()} </span> : null
@@ -89,7 +97,7 @@ export class ArtistBox extends Component {
     const noneStar   = ( data.popularity >= 80 && data.popularity < 100 ) ? <span>{this.renderNoneEmptyStars()}</span>  : null
     
     const genre = ( data.genres && data.genres.length > 0) ? <span>{data.genres[0]}</span> : <span>Not provided</span> 
-    const link = data.id ? <Link to={`/albums`} role="button">See Albums</Link> : null
+    const link = data.id ? <Link to={`/artist/${data.id}`} role="button" > See Albums </Link> : null
 
     return (
       <div className="artist-box">
@@ -99,13 +107,15 @@ export class ArtistBox extends Component {
         {twoStars}
         {oneStar}
         {noneStar}
-        <button className="btn btn-lg get-album-btn">{link}</button> 
+        <button className="btn btn-lg get-album-btn"  >
+          {link}
+        </button> 
       </div>
     )
   } 
 
   render () {
-    const {artist} = this.props
+    const {artist, dispatch} = this.props
     const imageUrl = (artist.images && artist.images.length ? 
       artist.images[0].url : 'https://s3.amazonaws.com/sebimages/score-placeholder.png')
 
@@ -122,5 +132,7 @@ export class ArtistBox extends Component {
   }
 }
 
-export default connect()(ArtistBox)
+const mapStateToProps = state => state
+
+export default connect(mapStateToProps)(ArtistBox)
 

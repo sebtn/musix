@@ -2,14 +2,17 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {Link} from 'react-router'
+import { bindActionCreators } from 'redux'
 
 import {ArtistBox} from './ArtistBox'
 import SearchBar from './SearchBar'
 
+import { startFetchArtistAlbums, fetchAlbums} from '../actions/albums'
+
  export class ArtistsMain extends Component {
   
   renderArtists = () => {
-    const {dispatch} = this.props
+    const {dispatch, onClick} = this.props
     const {artists} = this.props.artists
     const {input} = this.props.inputs
     
@@ -17,7 +20,10 @@ import SearchBar from './SearchBar'
       return (
         <div className="artists-main-container">
           { artists.items.map((artist, index) =>  {
-            return <ArtistBox key={index} key={artist.id} artist={artist}/>
+            return <ArtistBox 
+              key={artist.id} 
+              artist={artist} 
+              />
           } )} 
         </div>
       )
@@ -25,6 +31,7 @@ import SearchBar from './SearchBar'
   }
   /*------------------------------------------------------------------------------------ */
   render() {
+    const {dispatch} = this.props
     return (
       <div className="artists-main-box">
         <Link to="/" className="btn btn-xs back" role="button" >
@@ -38,10 +45,11 @@ import SearchBar from './SearchBar'
  }
 
 const mapStateToProps = state => {
-  const {artists, inputs} = state
+  const {artists, inputs, albums} = state
   return {
     artists: artists.toJS(),
-    inputs: inputs.toJS()
+    inputs: inputs.toJS(),
+    albums: albums.toJS()
   }
 }
 

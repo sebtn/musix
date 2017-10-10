@@ -2,30 +2,23 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {Link} from 'react-router'
+import { bindActionCreators } from 'redux'
 
 import { startFetchArtistAlbums } from '../actions/albums'
+import {startFetchArtists, startFetchArtistInfo} from '../actions/artists'
 
  export class AlbumsMain extends Component {
-  
-  componentDidMount = () => {
+  constructor(props) {
+    super(props)
+  }
+  componentWillMount = () => {
+    const {id}  = this.props.params
     const {dispatch} = this.props
-    const {artists} = this.props.artists
-    // const {input} = this.props
-    // dispatch( startFetchArtistAlbums() )
-    console.log(this.props)
-    
-    // artists.items.map((el, index) => {
-      // return console.log(el.id)
-    // })
+     dispatch( startFetchArtistAlbums(id) )
+     dispatch( startFetchArtistInfo(id) )
   }
 
-  renderAlbums = () => {
-      // return ( 
-      //   <div>
-      //     {console.log(artists)}
-      //   </div>
-      // )
-    }
+  renderAlbums = () => {  }
   
   /*------------------------------------------------------------------------------------ */
   render() {
@@ -38,19 +31,9 @@ import { startFetchArtistAlbums } from '../actions/albums'
            Back to artists
          </Link>
         <h1 className="albums-title">This is albums</h1>
-        {this.renderAlbums()}
       </div>
     )
   }
  }
 
-const mapStateToProps = state => {
-  const {albums, inputs, artists} = state
-  return {
-    albums: albums.toJS(),
-    artists: artists.toJS(),
-    inputs: inputs.toJS()
-  }
-}
-
-export default connect(mapStateToProps)(AlbumsMain)
+export default connect()(AlbumsMain)

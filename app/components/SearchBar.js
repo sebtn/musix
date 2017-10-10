@@ -28,7 +28,7 @@ class SearchBar extends Component {
             <input type="text" 
               placeholder="Search Artist"
               className="form-control"
-              onChange={(this.onInputChange)}              
+              onChange={this.onInputChange}              
               ref="artistName" 
             />
           </div>
@@ -44,5 +44,6 @@ const mapStateToProps = state => {
     inputs: inputs.toJS()
   }
 }
+
 export default connect(mapStateToProps)(SearchBar)
 

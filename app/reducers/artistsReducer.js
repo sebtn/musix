@@ -13,7 +13,6 @@ import {
 */
 const initialState = Map({
   isFetching: false,
-  // artists: Map(),
   artists: List(),
   details: Map()
 })
