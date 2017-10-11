@@ -2,17 +2,13 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {Link} from 'react-router'
-import { bindActionCreators } from 'redux'
 
 import {ArtistBox} from './ArtistBox'
 import SearchBar from './SearchBar'
 
-import { startFetchArtistAlbums, fetchAlbums} from '../actions/albums'
-
  export class ArtistsMain extends Component {
   
   renderArtists = () => {
-    const {dispatch, onClick} = this.props
     const {artists} = this.props.artists
     const {input} = this.props.inputs
     
@@ -31,7 +27,6 @@ import { startFetchArtistAlbums, fetchAlbums} from '../actions/albums'
   }
   /*------------------------------------------------------------------------------------ */
   render() {
-    const {dispatch} = this.props
     return (
       <div className="artists-main-box">
         <Link to="/" className="btn btn-xs back" role="button" >

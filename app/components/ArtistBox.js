@@ -3,12 +3,6 @@ import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {Router, Link} from 'react-router'
 import FontAwesome from 'react-fontawesome'
-import { bindActionCreators } from 'redux'
-
-
-import { startFetchArtistAlbums } from '../actions/albums'
-import {startFetchArtists} from '../actions/artists'
-
 
 export class ArtistBox extends Component {  
 
@@ -86,7 +80,6 @@ export class ArtistBox extends Component {
 
 
   renderArtistBox = (data) => {
-    const {onClick} = this.props 
     const name = data.name ? <span>Artist: {data.name}</span> : null
 
     const stars      = ( data.popularity === 0  ) ? <span> {this.renderFiveEmptyStars()} </span> : null
@@ -115,7 +108,7 @@ export class ArtistBox extends Component {
   } 
 
   render () {
-    const {artist, dispatch} = this.props
+    const {artist} = this.props
     const imageUrl = (artist.images && artist.images.length ? 
       artist.images[0].url : 'https://s3.amazonaws.com/sebimages/score-placeholder.png')
 
