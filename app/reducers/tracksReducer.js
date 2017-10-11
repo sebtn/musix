@@ -14,7 +14,7 @@ const initialState = Map({
 
 function receiveAlbumTracks(state, tracks) {
   var newState = fromJS({
-    tracks, 
+    tracks: tracks, 
     isFetching: false
   })
   return state.merge(newState)
@@ -30,7 +30,7 @@ function fetchAlbumTracks(state) {
 
 function receiveAlbumDetails(state, details) {
   var newState = fromJS({
-    details, 
+    details: details, 
     isFetching: false
   })
   return state.merge(newState)

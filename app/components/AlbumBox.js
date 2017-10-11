@@ -7,12 +7,13 @@ import {Router, Link} from 'react-router'
 export class AlbumBox extends Component {  
 
   renderAlbumBox = (data) => {
-    const name       = data.name ? <div>Album:{data.name} </div> : null
-    // const artist     = data.artists[0].name ? <span>{data.artist.name}</span> : null
-    const link = data.id ? <Link to={`/album/${data.id}`} role="button" > More  </Link> : null
+    const name       = data.name ? <div>Album: {data.name} </div> : null
+    const artistName = data.artists[0].name ? <div>Artists: {data.artists[0].name}</div> : null
+    const link       = data.id ? <Link to={`/album/${data.id}`} role="button" > More  </Link> : null
 
     return (
       <div className="album-box">
+        {artistName}
         {name}
         <button className="btn btn-lg get-album-btn"  >
         {link}

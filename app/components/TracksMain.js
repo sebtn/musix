@@ -3,13 +3,12 @@ import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {Link} from 'react-router'
 
-import {AlbumBox} from './AlbumBox'
+import {TrackBox} from './TrackBox'
+import {DetailBox} from './DetailBox'
 import { startFetchAlbumTracks, startFetchAlbumDetails } from '../actions/tracks'
 
  export class TracksMain extends Component {
-  constructor(props) {
-    super(props)
-  }
+
 
   componentWillMount = () => {
     const {dispatch} = this.props
@@ -19,7 +18,26 @@ import { startFetchAlbumTracks, startFetchAlbumDetails } from '../actions/tracks
   }
 
 
-  renderTracks = () => {  }
+  renderTracks = () => { 
+    const {tracks} = this.props.tracks
+
+    if(tracks !== undefined) {
+      return (
+        <div className="tracks-main-container">
+          {tracks.map( (track, index) => {
+            return <TrackBox 
+              key={track.index}
+              track={track}
+            />
+          } )}
+        </div>
+      )
+    }
+  }
+
+  renderDetails = () => {
+    
+  }
   
   /*------------------------------------------------------------------------------------ */
   render() {
@@ -29,20 +47,20 @@ import { startFetchAlbumTracks, startFetchAlbumDetails } from '../actions/tracks
         <Link to="/artists" className="btn btn-xs back-art" role="button" >Back to artists</Link>
         <Link to="/tracks" className="btn btn-xs back-art" role="button" >FF to tracks</Link>
         <h1 className="tracks-title">This is tracks</h1>
+        {this.renderTracks()}
       </div>
     )
   }
 
  }
 
- // const mapStateToProps = state => {
- //   const {artists, albums} = state
- //   return {
- //     artists: artists.toJS(),
- //     albums: albums.toJS()
- //   }
- // }
+ const mapStateToProps = state => {
+   const {artists, albums, tracks} = state
+   return {
+     artists: artists.toJS(),
+     albums: albums.toJS(),
+     tracks: tracks.toJS()
+   }
+ }
 
-
-// export default connect(mapStateToProps)(AlbumsMain)
-export default connect()(TracksMain)
+export default connect(mapStateToProps)(TracksMain)

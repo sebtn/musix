@@ -13,6 +13,7 @@ const receiveAlbumTracks = (json) => {
   return {
     type: RECEIVE_ALBUM_TRACKS,
     tracks: json.items
+    // tracks: json
   }
 }
 
