@@ -7,7 +7,6 @@ import albumsReducer from './albumsReducer'
 import tracksReducer from './tracksReducer'
 
 const rootReducer = combineReducers({
-  // state: (state = {}) => state
   auth: authReducer,
   artists: artistsReducer,
   albums: albumsReducer,

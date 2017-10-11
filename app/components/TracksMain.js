@@ -16,7 +16,6 @@ import { startFetchAlbumTracks, startFetchAlbumDetails } from '../actions/tracks
     const {id}  = this.props.params
     dispatch( startFetchAlbumTracks(id) )
     dispatch( startFetchAlbumDetails(id) )
-    console.log(id)
   }
 
 

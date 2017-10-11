@@ -6,7 +6,7 @@ import {
 
 const initialState = Map({
   isFetching: false,
-  items: List(),
+  albums: List()
 })
 
 function receiveArtistAlbums(state, albums) {

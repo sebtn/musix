@@ -4,8 +4,7 @@ export const START_FETCH_ALBUM_TRACKS = 'START_FETCH_ALBUM_TRACKS'
 export const startFetchAlbumTracks = id => dispatch => {
     dispatch( fetchAlbumTracks(id) )
     return spotifyApi.getAlbumTracks(id)
-      .then(json => console.log(json) )
-      // .then(json => dispatch( receiveAlbumTracks(json) )) 
+      .then(json => dispatch( receiveAlbumTracks(json) )) 
       .catch(err => console.log(err))
 }
 
@@ -28,8 +27,7 @@ export const START_FETCH_ALBUM_DETAILS = 'START_FETCH_ALBUM_DETAILS'
 export const startFetchAlbumDetails = id => dispatch => {
   dispatch( fetchAlbumDetails(id) )
   return spotifyApi.getAlbum(id)
-    .then(json => console.log(json) )
-    // .then(json => dispatch( receiveAlbumDetails(json) ))
+    .then(json => dispatch( receiveAlbumDetails(json) ))
     .catch(err => console.log(err))
 }
 
@@ -38,7 +36,7 @@ export const RECEIVE_ALBUM_DETAILS = 'RECEIVE_ALBUM_DETAILS'
 const receiveAlbumDetails = (json) => {
   return {
     type: RECEIVE_ALBUM_DETAILS,
-    details: json.items
+    details: json
   }
 }
 
