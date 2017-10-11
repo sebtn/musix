@@ -5,7 +5,6 @@ import {Link} from 'react-router'
 
 import {AlbumBox} from './AlbumBox'
 import { startFetchArtistAlbums } from '../actions/albums'
-import { startFetchAlbumTracks } from '../actions/tracks'
 
  export class AlbumsMain extends Component {
   constructor(props) {
@@ -16,8 +15,7 @@ import { startFetchAlbumTracks } from '../actions/tracks'
     const {id}  = this.props.params
     const {dispatch} = this.props
     const {albums} = this.props.albums
-     dispatch( startFetchArtistAlbums(id) )
-     dispatch( startFetchAlbumTracks(id) )
+    dispatch( startFetchArtistAlbums(id) )
   }
 
   renderAlbums = () => {  

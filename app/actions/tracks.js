@@ -3,9 +3,9 @@ import spotifyApi from './spoty'
 export const START_FETCH_ALBUM_TRACKS = 'START_FETCH_ALBUM_TRACKS'
 export const startFetchAlbumTracks = id => dispatch => {
     dispatch( fetchAlbumTracks(id) )
-    return spotifyApi.getArtistAlbums(id, {limit: 20})
-      .then(data => Promise.all( data.items.map( a => spotifyApi.getAlbumTracks(a.id) ) ))
-      .then(data => data.map(json => dispatch( receiveAlbumTracks(json) ) ) )
+    return spotifyApi.getAlbumTracks(id)
+      .then(json => console.log(json) )
+      // .then(json => dispatch( receiveAlbumTracks(json) )) 
       .catch(err => console.log(err))
 }
 
@@ -17,18 +17,34 @@ const receiveAlbumTracks = (json) => {
   }
 }
 
-export const RECEIVE_ALBUM = 'RECEIVE_ALBUM'
-const receiveAlbum = (data) => {
-  return {
-    type: RECEIVE_ALBUM,
-    album: data.items
-  }
-}
-
-
 export const FETCH_ALBUM_TRACKS = 'FETCH_ALBUM_TRACKS'
 export const fetchAlbumTracks = () => {
   return {
     type: FETCH_ALBUM_TRACKS
+  }
+}
+
+export const START_FETCH_ALBUM_DETAILS = 'START_FETCH_ALBUM_DETAILS'
+export const startFetchAlbumDetails = id => dispatch => {
+  dispatch( fetchAlbumDetails(id) )
+  return spotifyApi.getAlbum(id)
+    .then(json => console.log(json) )
+    // .then(json => dispatch( receiveAlbumDetails(json) ))
+    .catch(err => console.log(err))
+}
+
+
+export const RECEIVE_ALBUM_DETAILS = 'RECEIVE_ALBUM_DETAILS'
+const receiveAlbumDetails = (json) => {
+  return {
+    type: RECEIVE_ALBUM_DETAILS,
+    details: json.items
+  }
+}
+
+export const FETCH_ALBUM_DETAILS = 'FETCH_ALBUM_DETAILS'
+export const fetchAlbumDetails = () => {
+  return {
+    type: FETCH_ALBUM_DETAILS
   }
 }

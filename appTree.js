@@ -5,9 +5,11 @@
 │   │   ├── artists.js
 │   │   ├── index.js
 │   │   ├── searcher.js
-│   │   └── spoty.js
+│   │   ├── spoty.js
+│   │   └── tracks.js
 │   ├── app.js
 │   ├── components
+│   │   ├── AlbumBox.js
 │   │   ├── AlbumsMain.js
 │   │   ├── ArtistBox.js
 │   │   ├── ArtistsMain.js
@@ -24,7 +26,8 @@
 │   │   ├── artistsReducer.js
 │   │   ├── authReducer.js
 │   │   ├── index.js
-│   │   └── searcherReducer.js
+│   │   ├── searcherReducer.js
+│   │   └── tracksReducer.js
 │   ├── router
 │   │   └── index.js
 │   ├── styles
@@ -56,4 +59,4 @@
 ├── server.js
 └── webpack.config.js
 
-11 directories, 45 files
+11 directories, 48 files
