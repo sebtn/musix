@@ -20,7 +20,6 @@ import { startFetchAlbumTracks, startFetchAlbumDetails } from '../actions/tracks
 
   renderTracks = () => { 
     const {tracks} = this.props.tracks
-
     if(tracks !== undefined) {
       return (
         <div className="tracks-main-container">
@@ -37,13 +36,10 @@ import { startFetchAlbumTracks, startFetchAlbumDetails } from '../actions/tracks
 
   renderDetails = () => {
     const {details} = this.props.tracks
-
     if(details !== undefined) {
       return (
         <div className="details-main-container">
           <DetailBox details={details} />
-{/*          {console.log(this.props.tracks)}*/}
-          {console.log(details)}
         </div>
       )
     }
@@ -55,10 +51,10 @@ import { startFetchAlbumTracks, startFetchAlbumDetails } from '../actions/tracks
       <div className="tracks-main-box">
         <Link to="/" className="btn btn-xs back-login" role="button" >Back to login</Link>
         <Link to="/artists" className="btn btn-xs back-art" role="button" >Back to artists</Link>
-        <Link to="/tracks" className="btn btn-xs back-art" role="button" >FF to tracks</Link>
-        <h1 className="tracks-title">This is tracks</h1>
-        {this.renderDetails()}
-        {this.renderTracks()}
+        <div className="row row-for-tracks-info ">
+          <div className="col-6">{this.renderDetails()}</div>
+          <div className="col-6">{this.renderTracks()}</div>
+        </div>
       </div>
     )
   }

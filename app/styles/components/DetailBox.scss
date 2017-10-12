@@ -1,0 +1,29 @@
+.wrapper-box {
+  margin-top: 0;
+  padding: 0;
+  font-size: 1.25em; 
+  color: #FFFCF9;
+  font-weight: bold;
+  .card-for-detail {
+    width: auto;
+    height: auto;
+    .img-wrap {
+      img {
+      height: 30em;
+      width: 100%;
+      }
+    }
+    .detail-box {
+      background-color: #2B4162;
+      text-align: left;
+      padding: 0.25em;
+      height: auto;
+      list-style-type: none;
+      line-height: 2.75rem;
+      span  {
+        font-size: 1rem;
+        padding: 0.25em;
+      }
+    }
+  }  
+}

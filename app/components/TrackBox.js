@@ -6,15 +6,19 @@ import {Router, Link} from 'react-router'
 
 export class TrackBox extends Component {  
 
+  converMsToSeconds = (num) => {
+    let min = Math.floor((num/1000/60) << 0)
+    let sec = Math.floor((num/1000) % 60)
+    return min + ':' + sec
+  }
+
   renderTrackBox = (data) => {
-    const artistName  = data.artists[0].name ? <div>Artists: {data.artists[0].name}</div> : null
-    const trackName   = data.name ? <div>Track title: {data.name} </div> : null
-    const trackNumber = data.track_number ? <div>Track Number: {data.track_number}</div> : null
-    const duration    = data.duration_ms ? <div>Time: {data.duration_ms}</div> : null
+    const trackName   = data.name ? <sapn>{data.name} / </sapn> : null
+    const trackNumber = data.track_number ? <sapn>{data.track_number}.  </sapn> : null
+    const duration    = data.duration_ms ? <sapn>{this.converMsToSeconds(data.duration_ms)}  </sapn> : null
 
     return (
       <div className="track-box">
-        {artistName}
         {trackNumber}
         {trackName}
         {duration}
@@ -26,9 +30,9 @@ export class TrackBox extends Component {
     const {track} = this.props
     
     return (
-      <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12 wrapper-box">
+      <div className="col-xs-12 wrapper-box">
         <div className="card-for-tracks ">
-          {this.renderTrackBox(track)}
+          <ul>{this.renderTrackBox(track)}</ul>
         </div>
       </div>
     )

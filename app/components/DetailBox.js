@@ -6,20 +6,19 @@ import {Router, Link} from 'react-router'
 export class DetailBox  extends Component {  
 
   renderDetailBox = (data) => {
-    const albumName   = data.name ? <div>Album: {data.name}</div> : null
-    const albumLabel  = data.label ? <div>Label: {data.label}</div> : null
-    const releaseDate = data.release_date ? <div>Released: {data.release_date}</div> : null
-    const popularity  = data.popularity ? <div>Popularity: {data.popularity}</div> : null
+    const albumName   = data.name ? <sapn>Album: {data.name}</sapn> : null
+    const albumLabel  = data.label ? <sapn>Label: {data.label}</sapn> : null
+    const releaseDate = data.release_date ? <sapn>Released: {data.release_date}</sapn> : null
+    const popularity  = data.popularity ? <sapn>Popularity: {data.popularity}</sapn> : null
     const genre = ( data.genres && data.genres.length > 0) ? <span>{data.genres[0]}</span> : null
-
 
     return (
       <div className="detail-box">
-      {albumName}
-      {albumLabel}
-      {releaseDate}
-      {popularity}
-      {genre}
+        <li>{albumName}</li>
+        <li>{albumLabel}</li>
+        <li>{releaseDate}</li>
+        <li>{popularity}</li>
+        <li>{genre}</li>
       </div>
     )
   } 
@@ -30,8 +29,8 @@ export class DetailBox  extends Component {
       details.images[0].url : 'https://s3.amazonaws.com/sebimages/score-placeholder.png')
 
     return (
-      <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12 wrapper-box">
-        <div className="card-for-detail ">
+      <div className="wrapper-box">
+        <div className="card-for-detail">
           <div className="img-wrap">
             <img src={imageUrl} className="img-from-api img-responsive" />
           </div>

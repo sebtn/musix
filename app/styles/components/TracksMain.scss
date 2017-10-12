@@ -1,0 +1,25 @@
+.tracks-main-box {
+  width: 90%;
+  justify-content: center;
+  margin: 0 auto;
+  .back {
+    border-radius: 0;
+    margin: 1.5rem 1rem;
+    font: 1rem;
+    font-weight: bold;
+    background-color: #26547C;
+    color: #FFFCF9;
+    width: 100%;
+  }
+}
+.tracks-main-container {
+  background-color:#FFFCF9;  
+  justify-content: center;
+  margin-top: 2em;
+}
+.details-main-container {
+  background-color:#FFFCF9;  
+  justify-content: center;
+  margin-top: 2em;
+  color: #333;
+}

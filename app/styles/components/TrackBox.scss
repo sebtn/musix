@@ -1,0 +1,22 @@
+.wrapper-box {
+  margin-top: 0;
+  padding: 0;
+  font-size: 1.25em; 
+  color: #FFFCF9;
+  font-weight: bold;
+  .card-for-tracks {
+    width: auto;
+    display: flex-inline;
+    height: auto;
+    .track-box {
+      background-color: #2B4162;
+      padding: 0.25em;      
+      display: flex-inline;
+      line-height: 2.75rem;
+      span  {
+        font-size: 1rem;
+        padding: 0.25em;
+      }
+    }
+  }  
+}
