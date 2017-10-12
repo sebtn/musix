@@ -10,8 +10,8 @@ export class AlbumBox extends Component {
   }
 
   renderAlbumBox = (data) => {
+    const artistName = data.artists[0].name ? <span>{data.artists[0].name}</span> : null
     const name       = data.name ? <span>Album: {data.name} </span> : null
-    const artistName = data.artists[0].name ? <span>Artist: {data.artists[0].name}</span> : null
     const link       = data.id ? <Link to={`/album/${data.id}`} role="button" > Get Details  </Link> : null
 
     return (
