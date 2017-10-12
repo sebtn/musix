@@ -4,7 +4,9 @@
   "description": "build using React.js and redux",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "karma start"
+    "test": "karma start",
+    "start": "node server.js",
+    "postinstall": "webpack -p"
   },
   "author": "Seb",
   "license": "ISC",
