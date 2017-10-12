@@ -12,7 +12,7 @@ const CLIENT_SECRET = '031469a349c54d10a4134bc5c8963c92'
 // const CLIENT_SECRET = process.env.client_secret
 // const REDIRECT_URI = process.env.redirect_uri || 'http://localhost:3000/callback'
 // const REDIRECT_URI =  'http://localhost:3000/callback/'
-const REDIRECT_URI  = 'https://aqueous-brook-79722.herokuapp.com/callback/''
+const REDIRECT_URI =  'https://aqueous-brook-79722.herokuapp.com/callback/'
 
 const STATE_KEY = 'spotify_auth_state'
 // requests authorization

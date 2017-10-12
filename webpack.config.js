@@ -9,9 +9,7 @@ module.exports = {
   ],
   plugins: [
     new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify('production')
-      }
+      'process.env.NODE_ENV': JSON.stringify('production')
     }),
     new webpack.optimize.UglifyJsPlugin({
       mangle: true,
@@ -70,5 +68,5 @@ module.exports = {
       }
     ]
   },
-  devtool: 'cheap-source-map'
+  devtool: process.env.NODE_ENV === 'production' ? undefined :'cheap-source-map'
 }
