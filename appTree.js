@@ -14,12 +14,15 @@
 │   │   ├── ArtistBox.js
 │   │   ├── ArtistsMain.js
 │   │   ├── Auth.js
+│   │   ├── DetailBox.js
 │   │   ├── Error.js
 │   │   ├── Jumbotron.js
 │   │   ├── Login.js
 │   │   ├── Main.js
 │   │   ├── NavBar.js
-│   │   └── SearchBar.js
+│   │   ├── SearchBar.js
+│   │   ├── TrackBox.js
+│   │   └── TracksMain.js
 │   ├── log_in.svg
 │   ├── reducers
 │   │   ├── albumsReducer.js
@@ -59,4 +62,4 @@
 ├── server.js
 └── webpack.config.js
 
-11 directories, 48 files
+11 directories, 51 files

@@ -26,7 +26,7 @@ import { startFetchAlbumTracks, startFetchAlbumDetails } from '../actions/tracks
         <div className="tracks-main-container">
           {tracks.map( (track, index) => {
             return <TrackBox 
-              key={track.index}
+              key={track.id}
               track={track}
             />
           } )}
@@ -36,7 +36,17 @@ import { startFetchAlbumTracks, startFetchAlbumDetails } from '../actions/tracks
   }
 
   renderDetails = () => {
-    
+    const {details} = this.props.tracks
+
+    if(details !== undefined) {
+      return (
+        <div className="details-main-container">
+          <DetailBox details={details} />
+{/*          {console.log(this.props.tracks)}*/}
+          {console.log(details)}
+        </div>
+      )
+    }
   }
   
   /*------------------------------------------------------------------------------------ */
@@ -47,6 +57,7 @@ import { startFetchAlbumTracks, startFetchAlbumDetails } from '../actions/tracks
         <Link to="/artists" className="btn btn-xs back-art" role="button" >Back to artists</Link>
         <Link to="/tracks" className="btn btn-xs back-art" role="button" >FF to tracks</Link>
         <h1 className="tracks-title">This is tracks</h1>
+        {this.renderDetails()}
         {this.renderTracks()}
       </div>
     )
@@ -58,8 +69,8 @@ import { startFetchAlbumTracks, startFetchAlbumDetails } from '../actions/tracks
    const {artists, albums, tracks} = state
    return {
      artists: artists.toJS(),
-     albums: albums.toJS(),
-     tracks: tracks.toJS()
+     albums : albums.toJS(),
+     tracks : tracks.toJS()
    }
  }
 

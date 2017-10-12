@@ -116,7 +116,7 @@ export class ArtistBox extends Component {
       <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12 wrapper-box">
         <div className="card-for-artist ">
           <div className="img-wrap">
-          <img src={imageUrl} className="img-from-api img-responsive" />
+            <img src={imageUrl} className="img-from-api img-responsive" />
           </div>
           {this.renderArtistBox(artist)}
         </div>

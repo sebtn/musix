@@ -34,8 +34,7 @@ import { startFetchArtistAlbums } from '../actions/albums'
      )
     }
   }
-  renderTracks = () => {  }
-  
+
   /*------------------------------------------------------------------------------------ */
   render() {
     return (
