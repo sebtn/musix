@@ -8,7 +8,9 @@ import {DetailBox} from './DetailBox'
 import { startFetchAlbumTracks, startFetchAlbumDetails } from '../actions/tracks'
 
  export class TracksMain extends Component {
-
+  constructor(props) {
+    super(props)
+  }
 
   componentWillMount = () => {
     const {dispatch} = this.props
@@ -47,10 +49,12 @@ import { startFetchAlbumTracks, startFetchAlbumDetails } from '../actions/tracks
   
   /*------------------------------------------------------------------------------------ */
   render() {
+    console.log('tracksMain: ', this.props)
     return (
       <div className="tracks-main-box">
-        <Link to="/" className="btn btn-xs back-login" role="button" >Back to login</Link>
+        <Link to="/" className="btn btn-xs back" role="button" >Back to login</Link>
         <Link to="/artists" className="btn btn-xs back-art" role="button" >Back to artists</Link>
+        <h1 className="tracks-title">The tracks and album details</h1>
         <div className="row row-for-tracks-info ">
           <div className="col-6">{this.renderDetails()}</div>
           <div className="col-6">{this.renderTracks()}</div>

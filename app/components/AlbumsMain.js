@@ -20,6 +20,7 @@ import { startFetchArtistAlbums } from '../actions/albums'
 
   renderAlbums = () => {  
     const {albums} = this.props.albums
+    console.log('AlbumMain props: ', this.props)
 
     if (albums !== undefined) { 
       return (
@@ -39,22 +40,20 @@ import { startFetchArtistAlbums } from '../actions/albums'
   render() {
     return (
       <div className="albums-main-box">
-        <Link to="/" className="btn btn-xs back-login" role="button" >Back to login</Link>
+        <Link to="/" className="btn btn-xs back" role="button" >Back to login</Link>
         <Link to="/artists" className="btn btn-xs back-art" role="button" >Back to artists</Link>
-        <Link to="/tracks" className="btn btn-xs back-art" role="button" >FF to tracks</Link>
-        <h1 className="albums-title">This is albums</h1>
+        <h1 className="albums-title">The Albums</h1>
         {this.renderAlbums()}
       </div>
     )
   }
-
  }
 
  const mapStateToProps = state => {
    const {artists, albums} = state
    return {
      artists: artists.toJS(),
-     albums: albums.toJS()
+     albums: albums.toJS(),
    }
  }
 

@@ -1,18 +1,18 @@
 .nav-container {
+  font-family: 'Bitter', serif;
   background-color: #FFD166;
-  min-height: 6em;
+  min-height: 7em;
   text-align: center;
-  color:#EF476F;
+  color:#ff8566;
   font-weight: bold;
   opacity: 1;
   nav {
     margin: 1em;
     display: inline-block;
     text-align:center; 
-    h1 {
+    p {
       margin-top: 0.25em;
-      font-size: 3.5em;
-      line-height: 125%;
+      font-size: 4.0em;
     }
   } 
 }

@@ -5,7 +5,7 @@ import {connect} from 'react-redux'
 const NavBar = () => (
   <div className="nav-container">
     <nav className="nav">
-      <h1>Spot your favorite tunes  </h1>
+      <p> Spot: your favorite tunes  </p>
     </nav>
   </div>
 )

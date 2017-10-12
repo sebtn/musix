@@ -88,12 +88,13 @@ export class ArtistBox extends Component {
     const oneStar    = ( data.popularity >= 60 && data.popularity < 80 )  ? <span>{this.renderOneEmptyStars()}</span>   : null
     const noneStar   = ( data.popularity >= 80 && data.popularity < 100 ) ? <span>{this.renderNoneEmptyStars()}</span>  : null
     
-    const genre = ( data.genres && data.genres.length > 0) ? <span>{data.genres[0]}</span> : <span>Not provided</span> 
-    const link = data.id ? <Link to={`/artist/${data.id}`} role="button" > See Albums </Link> : null
+    const genre = ( data.genres && data.genres.length > 0) ? <span>Genre: {data.genres[0]}</span> : <span>Not provided</span> 
+    const link = data.id ? <Link to={`/artist/${data.id}`} role="button" > Get Albums </Link> : null
 
     return (
       <div className="artist-box">
         {name} 
+        {genre}
         {fourStars}
         {threeStars}
         {twoStars}

@@ -5,11 +5,14 @@ import {Router, Link} from 'react-router'
 
 
 export class AlbumBox extends Component {  
+  constructor(props) {
+    super(props)
+  }
 
   renderAlbumBox = (data) => {
     const name       = data.name ? <span>Album: {data.name} </span> : null
     const artistName = data.artists[0].name ? <span>Artist: {data.artists[0].name}</span> : null
-    const link       = data.id ? <Link to={`/album/${data.id}`} role="button" > More  </Link> : null
+    const link       = data.id ? <Link to={`/album/${data.id}`} role="button" > Get Details  </Link> : null
 
     return (
       <div className="album-box">

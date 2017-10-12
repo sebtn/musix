@@ -7,10 +7,14 @@ import {ArtistBox} from './ArtistBox'
 import SearchBar from './SearchBar'
 
  export class ArtistsMain extends Component {
+    constructor(props) {
+    super(props)
+  }    
   
   renderArtists = () => {
     const {artists} = this.props.artists
     const {input} = this.props.inputs
+    console.log('ArtistMain: ', this.props)
     
     if (artists.items !== undefined) {
       return (
@@ -32,6 +36,7 @@ import SearchBar from './SearchBar'
         <Link to="/" className="btn btn-xs back" role="button" >
            Back to login
          </Link>
+        <h1 className="artists-title">The artists</h1>
         <SearchBar  />
         {this.renderArtists()}
       </div>

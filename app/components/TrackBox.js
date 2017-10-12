@@ -9,13 +9,13 @@ export class TrackBox extends Component {
   converMsToSeconds = (num) => {
     let min = Math.floor((num/1000/60) << 0)
     let sec = Math.floor((num/1000) % 60)
-    return min + ':' + sec
+    return min + ' : ' + sec
   }
 
   renderTrackBox = (data) => {
-    const trackName   = data.name ? <sapn>{data.name} / </sapn> : null
     const trackNumber = data.track_number ? <sapn>{data.track_number}.  </sapn> : null
-    const duration    = data.duration_ms ? <sapn>{this.converMsToSeconds(data.duration_ms)}  </sapn> : null
+    const trackName   = data.name ? <sapn>{data.name} <span> / </span> </sapn> : null
+    const duration    = data.duration_ms ? <sapn> {this.converMsToSeconds(data.duration_ms)}  </sapn> : null
 
     return (
       <div className="track-box">

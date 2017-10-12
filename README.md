@@ -1,11 +1,10 @@
 ## Music App - SPOT
 This app uses the Spotify API to browse the local library  and it's capable to search your favorite artists and music.
 
----
 ### How to install and run the app:
 
-You can use it locally, just make sure ```node``` and ```npm``` are install in your local machine. 
-+ Clone the repo.
+You can use it locally, just make sure ```git```, ```node``` and ```npm``` are installed in your local machine. Inside terminal:
++ Clone the repo typing: ```git clone https://github.com/sebtn/musix.git```
 + Type ```npm install```
 + Type ```npm start```
 + Type ```./node_modules/.bin/webpack -w```
@@ -14,6 +13,7 @@ You can use it locally, just make sure ```node``` and ```npm``` are install in y
 For some help visit: 
 https://nodejs.org/en/download/package-manager/
 https://www.npmjs.com/get-npm
+https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
 ### Some notes
 The build process is automated and bundle files for development and production. ```bundle.js```, ```bundle,js.map```, ```bundle.js.gz``` will be generated inside the public folder once webpack has run and bundled all files inside the main application folder.

@@ -1,17 +1,26 @@
 .login {
   margin: auto;
-  width: 95%;
+  width: 75%;
   padding: 2.75rem;
-  background-color: #FFD166;
-  color:#EF476F;
-  opacity:1;
+  background-color: #26547C;
+  opacity: 0.75;
+  color:#FFFCF9;
+  /*color:#EF476F;*/
   text-align: center;
+  border-bottom-right-radius: 12em;
+  border-bottom-left-radius: 12em;
+  min-height: 50em;
+  h1 {
+    font-family: 'Bitter', serif;
+    margin: 2em 1rem;
+  }
   h2, h3, h4 {
     margin: 2em 1rem;
     text-align: center;
   }
   svg {
-    height: 5em;
-    width:15em;
+    margin-top: 3rem;
+    height: 10em;
+    width:25em;
   }
 }
