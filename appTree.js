@@ -61,10 +61,12 @@
 ├── package.json
 ├── public
 │   ├── bundle.js
+│   ├── bundle.js.gz
+│   ├── bundle.js.map
 │   └── index.html
 ├── README.md
 ├── routes.js
 ├── server.js
 └── webpack.config.js
 
-11 directories, 56 files
+11 directories, 58 files
