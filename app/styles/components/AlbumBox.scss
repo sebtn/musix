@@ -4,7 +4,7 @@
   font-size: 1.25em; 
   color: #FFFCF9;
   font-weight: bold;
-  .card-for-artist {
+  .card-for-album {
     width: auto;
     height: auto;
     .img-wrap {
@@ -14,7 +14,7 @@
       /*border: 1px solid #FFFCF9;*/
       }
     }
-    .artist-box {
+    .album-box {
       /*background-color: #26547C;*/
       /*opacity: 0.75;*/
       background-color: #2B4162;
@@ -28,7 +28,7 @@
         display: flex;
         padding: 0.25em;
       }
-      .get-album-btn {
+      .get-track-btn {
         border-radius: 0px;
         margin: 1.25em 0.5em;
         background-color: #FFD166;
@@ -36,19 +36,12 @@
         font-weight: bold;
         color: #FFFCF9 !important ;
       }
-      .get-album-btn:hover, 
-      .get-album-btn:focus,
-      .get-album-btn:active, 
-      .get-album-btn.active, {
+      .get-track-btn:hover, 
+      .get-track-btn:focus,
+      .get-track-btn:active, 
+      .get-track-btn.active, {
         background-color: #FFD166;
         color: #FFFCF9 !important ;
-      }
-      .one-to-twenty, .zero, 
-      .twenty-to-forty, 
-      .forty-to-sixty, 
-      .sixty-to-eigthty,
-      .eigthty-plus {
-        display: inline-flex;
       }
     }
   }  

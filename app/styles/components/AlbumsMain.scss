@@ -1,5 +1,5 @@
 .albums-main-box {
-  .back-art, .back-login {
+  .back {
     border-radius: 0;
     margin: 1.5rem 1rem;
     font: 1rem;
@@ -7,4 +7,11 @@
     background-color: #26547C;
     color: #FFFCF9;
   }
+}
+.albums-main-container {
+  background-color:#FFFCF9;  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2em;
 }

@@ -1,14 +1,15 @@
 @import './base/core';
 @import './components/NavBar';
-@import './components/ArtistBox';
 @import './components/ArtistsMain';
+@import './components/ArtistBox';
 @import './components/SearchBar';
 @import './components/AlbumsMain';
+@import './components/AlbumBox';
 @import './components/Jumbotron';
 @import './components/Auth';
 @import './components/Login';
 
-body { 
+body, html { 
   height:100%; 
   color: #333;
   font-family: "Lucida Console", Monaco, monospace;  

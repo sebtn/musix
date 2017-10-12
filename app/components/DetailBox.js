@@ -26,14 +26,14 @@ export class DetailBox  extends Component {
 
   render () {
     const {details} = this.props
-    // const imageUrl = (detail.images && detail.images.length ? 
-    //   detail.images[0].url : 'https://s3.amazonaws.com/sebimages/score-placeholder.png')
+    const imageUrl = (details.images && details.images.length ? 
+      details.images[0].url : 'https://s3.amazonaws.com/sebimages/score-placeholder.png')
 
     return (
       <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12 wrapper-box">
         <div className="card-for-detail ">
           <div className="img-wrap">
-{/*            <img src={imageUrl} className="img-from-api img-responsive" />*/}
+            <img src={imageUrl} className="img-from-api img-responsive" />
           </div>
           {this.renderDetailBox(details)}
         </div>
