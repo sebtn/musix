@@ -6,7 +6,6 @@ import {syncHistory, routeReducer} from 'react-router-redux'
 import {hashHistory} from 'react-router'
 import {createStore, applyMiddleware, compose} from 'redux'
 import thunk from 'redux-thunk'
-import createDebounce from 'redux-debounced'
 
 import  './styles/app.scss' 
 import router from './router/index'
@@ -15,7 +14,6 @@ import reducers from './reducers/index'
 const reduxRouterMiddleware = syncHistory(hashHistory)
 
 const createMiddleware = applyMiddleware(
-  createDebounce(),
   thunk, 
   reduxRouterMiddleware
 )(createStore)
