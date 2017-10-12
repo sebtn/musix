@@ -16,10 +16,12 @@
     .detail-box {
       background-color: #2B4162;
       text-align: left;
-      padding: 0.25em;
+      padding-left: 1.25em;
       height: auto;
       list-style-type: none;
-      line-height: 2.75rem;
+      & li{
+        line-height: 2.75rem;
+      } 
       span  {
         font-size: 1rem;
         padding: 0.25em;

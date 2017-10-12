@@ -39,14 +39,19 @@
 │   │   │   ├── _core.scss
 │   │   │   └── _variables.scss
 │   │   └── components
+│   │       ├── AlbumBox.scss
 │   │       ├── AlbumsMain.scss
 │   │       ├── ArtistBox.scss
 │   │       ├── ArtistsMain.scss
 │   │       ├── Auth.scss
+│   │       ├── DetailBox.scss
 │   │       ├── Jumbotron.scss
 │   │       ├── Login.scss
+│   │       ├── Main.scss
 │   │       ├── NavBar.scss
-│   │       └── SearchBar.scss
+│   │       ├── SearchBar.scss
+│   │       ├── TrackBox.scss
+│   │       └── TracksMain.scss
 │   └── tests
 │       └── components
 │           └── test_index.js
@@ -62,4 +67,4 @@
 ├── server.js
 └── webpack.config.js
 
-11 directories, 51 files
+11 directories, 56 files

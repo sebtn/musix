@@ -82,7 +82,6 @@ export class ArtistBox extends Component {
   renderArtistBox = (data) => {
     const name = data.name ? <span>Artist: {data.name}</span> : null
 
-    const stars      = ( data.popularity === 0  ) ? <span> {this.renderFiveEmptyStars()} </span> : null
     const fourStars  = ( data.popularity > -1  && data.popularity < 20 )  ? <span>{this.renderFourEmptyStars()}</span>  : null
     const threeStars = ( data.popularity >= 20 && data.popularity < 40 )  ? <span>{this.renderThreeEmptyStars()}</span> : null
     const twoStars   = ( data.popularity >= 40 && data.popularity < 60 )  ? <span>{this.renderTwoEmptyStars()}</span>   : null
