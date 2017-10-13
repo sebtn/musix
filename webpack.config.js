@@ -68,5 +68,6 @@ module.exports = {
       }
     ]
   },
-  devtool: process.env.NODE_ENV === 'production' ? undefined :'cheap-source-map'
+  // devtool: process.env.NODE_ENV === 'production' ? undefined :'cheap-source-map'
+  devtool: 'cheap-module-eval-source-map'
 }
