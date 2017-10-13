@@ -6,13 +6,13 @@ import {
 
 const initialState = Map({
   albums: List(),
-  isFetching: false
+  // isFetching: false
 })
 
 function receiveNewReleases(state, albums) {
-  var newState = fromJs({
+  var newState = fromJS({
     albums: albums,
-    isFetching: false
+    // isFetching: false
   })
   return state.merge(newState)
 }

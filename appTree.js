@@ -4,6 +4,7 @@
 │   │   ├── albums.js
 │   │   ├── artists.js
 │   │   ├── index.js
+│   │   ├── newReleases.js
 │   │   ├── searcher.js
 │   │   ├── spoty.js
 │   │   └── tracks.js
@@ -20,6 +21,8 @@
 │   │   ├── Login.js
 │   │   ├── Main.js
 │   │   ├── NavBar.js
+│   │   ├── NewReleaseBox.js
+│   │   ├── NewReleasesMain.js
 │   │   ├── SearchBar.js
 │   │   ├── TrackBox.js
 │   │   └── TracksMain.js
@@ -29,6 +32,7 @@
 │   │   ├── artistsReducer.js
 │   │   ├── authReducer.js
 │   │   ├── index.js
+│   │   ├── newReleasesReducer.js
 │   │   ├── searcherReducer.js
 │   │   └── tracksReducer.js
 │   ├── router
@@ -56,6 +60,8 @@
 │       └── components
 │           └── test_index.js
 ├── appTree.js
+├── config
+│   └── development.env
 ├── config.js
 ├── karma.conf.js
 ├── package.json
@@ -69,4 +75,4 @@
 ├── server.js
 └── webpack.config.js
 
-11 directories, 58 files
+12 directories, 63 files

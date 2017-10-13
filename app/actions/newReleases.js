@@ -1,8 +1,7 @@
 import spotifyApi from './spoty'
 
 export const START_FETCH_NEW_RELEASES = 'START_FETCH_NEW_RELEASES'
-export const startFetchNewReleases = dispatch => {
-  dispatch( fetchNewReleases() )
+export const startFetchNewReleases = () => dispatch => {
     return spotifyApi.getNewReleases()
       .then( json => dispatch( receiveNewReleases(json) ))
       .catch( err => console.log(err) )
@@ -19,6 +18,6 @@ export const RECEIVE_NEW_RELEASES = 'RECEIVE_NEW_RELEASES'
 export const receiveNewReleases = (json) => {
   return {
     type: RECEIVE_NEW_RELEASES,
-    albums: json.items
+    albums: json
   }
 }
