@@ -19,7 +19,7 @@ function receiveArtistAlbums(state, albums) {
 
 
 function fetchArtistAlbums(state) {
-  let newState = Map({
+  var newState = Map({
     isFetching: true
   })
   return state.merge(newState)
