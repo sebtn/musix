@@ -1,5 +1,5 @@
-.albums-main-box {
-  .back, .back-art, .releases {
+.newReleases-main-box {
+  .back {
     border-radius: 0;
     margin: 1.5rem 1rem;
     font: 1rem;
@@ -7,7 +7,7 @@
     background-color: #26547C;
     color: #FFFCF9;
   }
-  .albums-title {
+  .newRelease-title {
     font-family: 'Bitter', serif;
     text-align: center;
     font-weight: bold;
@@ -16,7 +16,7 @@
     font-size: 2.5rem;
   }
 }
-.albums-main-container {
+.newReleases-main-container {
   background-color:#FFFCF9;  
   display: flex;
   flex-wrap: wrap;

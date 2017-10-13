@@ -6,7 +6,7 @@ export class NewReleaseBox extends Component {
 
   renderNewReleaseBox = (data) => {
     const name   = data.name ? <span>{data.name}</span> : null
-    const artist = data.artists[0].name ? <span>{data.artists[0].name}</span> : null
+    const artist = data.artists[0].name ? <span>Artist: {data.artists[0].name}</span> : null
 
     return(
       <div className="newRelease-box">
@@ -20,7 +20,7 @@ export class NewReleaseBox extends Component {
     const {newRelease} = this.props
     const imageUrl = (newRelease.images ? newRelease.images[0].url : 'https://s3.amazonaws.com/sebimages/score-placeholder.png')  
     return (
-      <div className="col-xs-12 wrapper-box">
+      <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12 wrapper-box">
         <div className="card-for-newRelease">
         <div className="img-wrap">
           <img src={imageUrl} className="img-from-api img-responsive" />

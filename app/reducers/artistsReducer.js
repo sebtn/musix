@@ -42,7 +42,6 @@ function fetchArtists(state) {
   return state.merge(newState)
 }
 
-
 /*Main reducer: reduces the state using a store registered
 * action XOR the same state it got passed along.
 * The state for a particular reducer's starting point. 

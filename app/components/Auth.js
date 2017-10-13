@@ -14,7 +14,6 @@ class Auth extends Component {
     getMyInfo()
   } 
 
-/*------------------------------------------------------------------*/	
   render() {
     const { accessToken, refreshToken, auth } = this.props
 
@@ -26,7 +25,6 @@ class Auth extends Component {
   }
 }
 
-/*------------------------------------------------------------ */
 const mapDispatchToProps = dispatch => {
   return {
     setTokens:   bindActionCreators(setTokens, dispatch),

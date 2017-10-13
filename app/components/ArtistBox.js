@@ -78,7 +78,6 @@ export class ArtistBox extends Component {
     )
   }
 
-
   renderArtistBox = (data) => {
     const name = data.name ? <span>Artist: {data.name}</span> : null
 

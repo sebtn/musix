@@ -55,7 +55,6 @@ function spotifyMeSuccess(state, auth) {
 export default function reduce(state = initialState, action) {
   switch (action.type) {
 
-  //set the token
   case SPOTIFY_TOKENS:
     return spotifyTokens(state, action.accessToken, action.refreshToken)
 
