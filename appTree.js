@@ -51,8 +51,9 @@
 │   │       ├── DetailBox.scss
 │   │       ├── Jumbotron.scss
 │   │       ├── Login.scss
-│   │       ├── Main.scss
 │   │       ├── NavBar.scss
+│   │       ├── NewReleaseBox.scss
+│   │       ├── NewReleasesMain.scss
 │   │       ├── SearchBar.scss
 │   │       ├── TrackBox.scss
 │   │       └── TracksMain.scss
@@ -75,4 +76,4 @@
 ├── server.js
 └── webpack.config.js
 
-12 directories, 63 files
+12 directories, 64 files
