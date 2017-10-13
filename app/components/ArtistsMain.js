@@ -14,7 +14,7 @@ import SearchBar from './SearchBar'
   renderArtists = () => {
     const {artists} = this.props.artists
     const {input} = this.props.inputs
-    console.log('ArtistMain: ', this.props)
+    // console.log('ArtistMain: ', this.props)
     
     if (artists.items !== undefined) {
       return (

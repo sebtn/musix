@@ -49,7 +49,7 @@ import { startFetchAlbumTracks, startFetchAlbumDetails } from '../actions/tracks
   
   /*------------------------------------------------------------------------------------ */
   render() {
-    console.log('tracksMain: ', this.props)
+    // console.log('tracksMain: ', this.props)
     return (
       <div className="tracks-main-box">
         <Link to="/" className="btn btn-xs back" role="button" >Back to login</Link>

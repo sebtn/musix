@@ -18,6 +18,6 @@ export const RECEIVE_NEW_RELEASES = 'RECEIVE_NEW_RELEASES'
 export const receiveNewReleases = (json) => {
   return {
     type: RECEIVE_NEW_RELEASES,
-    albums: json
+    albums: json.albums
   }
 }

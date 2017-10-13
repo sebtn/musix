@@ -20,7 +20,7 @@ import { startFetchArtistAlbums } from '../actions/albums'
 
   renderAlbums = () => {  
     const {albums} = this.props.albums
-    console.log('AlbumMain props: ', this.props)
+    // console.log('AlbumMain props: ', this.props)
 
     if (albums !== undefined) { 
       return (
