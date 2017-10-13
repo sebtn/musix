@@ -10,8 +10,10 @@ export class NewReleasesMain extends Component {
 
   componentWillMount = () => {
     const {dispatch} = this.props
-    dispatch( startFetchAlbumTracks(id) )
+    dispatch( startFetchNewReleases() )
   }
 
 
 }
+
+export default  connect()(NewReleasesMain)

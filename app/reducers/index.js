@@ -12,6 +12,7 @@ const rootReducer = combineReducers({
   artists: artistsReducer,
   albums: albumsReducer,
   tracks: tracksReducer,
+  newReleases: newReleasesReducer,
   inputs: searcherReducer
 })
 
