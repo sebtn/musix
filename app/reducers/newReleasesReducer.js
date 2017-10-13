@@ -24,8 +24,8 @@ function fetchNewReleases(state) {
   return state.merge(newState)
 }
 
-export default newReleasesReducer(state = initialState, action) {
-  switch(actio.type) {
+export default function newReleasesReducer(state = initialState, action) {
+  switch(action.type) {
     case RECEIVE_NEW_RELEASES:
       return receiveNewReleases(state, action.albums)
 
