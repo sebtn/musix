@@ -54,6 +54,7 @@ import { startFetchAlbumTracks, startFetchAlbumDetails } from '../actions/tracks
       <div className="tracks-main-box">
         <Link to="/" className="btn btn-xs back" role="button" >Back to login</Link>
         <Link to="/artists" className="btn btn-xs back-art" role="button" >Back to artists</Link>
+        <Link to="/newReleases" className="btn btn-xs releases" role="button" >New releases</Link>
         <h1 className="tracks-title">The tracks and album details</h1>
         <div className="row row-for-tracks-info ">
           <div className="col-6">{this.renderDetails()}</div>

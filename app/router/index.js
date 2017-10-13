@@ -8,7 +8,7 @@ import Auth from '../components/Auth'
 import ArtistsMain from '../components/ArtistsMain'
 import AlbumsMain from '../components/AlbumsMain'
 import TracksMain from '../components/TracksMain'
-
+import NewReleasesMain from '../components/NewReleasesMain'
 
 export default (
   <Router history={hashHistory}>
@@ -19,6 +19,7 @@ export default (
       <Route path="artists" component={ArtistsMain} />
       <Route path="artist/:id" component={AlbumsMain} />
       <Route path="album/:id" component={TracksMain} />
+      <Route path="newReleases" component={NewReleasesMain} />
     </Route>
   </Router>
 )
