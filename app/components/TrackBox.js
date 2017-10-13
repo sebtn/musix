@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {Router, Link} from 'react-router'
 
-
 export class TrackBox extends Component {  
 
   converMsToSeconds = (num) => {

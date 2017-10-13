@@ -6,7 +6,6 @@ import FontAwesome from 'react-fontawesome'
 
 export class DetailBox  extends Component {  
 
-
   renderFiveEmptyStars = () => {
     return (
       <div className="zero">

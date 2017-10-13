@@ -6,7 +6,6 @@ import NavBar from './NavBar'
 
 class Main extends Component {
 
-/*------------------------------------------------------------------*/	
   render() {
     let {children} = this.props
     return (

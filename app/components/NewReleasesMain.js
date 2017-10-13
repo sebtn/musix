@@ -21,8 +21,7 @@ export class NewReleasesMain extends Component {
     if(items !== undefined) {
       return(
         <div className="newReleases-main-container">
-        {console.log(items)}
-          {items.map( (newRelease, index) => {
+          { items.map( (newRelease, index) => {
             return <NewReleaseBox 
               key={newRelease.id}
               newRelease={newRelease}
@@ -36,7 +35,9 @@ export class NewReleasesMain extends Component {
   render() {
     return (
       <div className="newReleases-main-box">
-        <h1 className="newRelease-title">This is releases</h1>
+        <Link to="/" className="btn btn-lg back" role="button" > Back to login</Link>
+        <Link to="/artists" className="btn btn-lg back" role="button" > Back to artists</Link>
+        <h1 className="newRelease-title">This are some new releases in spotify</h1>
           {this.renderNewReleases()}
       </div>
     )

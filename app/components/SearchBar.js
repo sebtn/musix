@@ -8,9 +8,9 @@ import { setSearchText } from '../actions/searcher'
 class SearchBar extends Component {
   constructor(props) {
     super(props)
-    const {dataType} = this.props
+    // const {dataType} = this.props
   }
-/*------------------------------------------------------------------*/
+  
   onInputChange = (event) => {
     const {dispatch} = this.props
     if (event.target.value.length  > 0) {
@@ -19,7 +19,6 @@ class SearchBar extends Component {
     }
   }
   
-/*------------------------------------------------------------------*/	
   render() {
     let {artist} = this.props
     return (

@@ -14,7 +14,6 @@ import SearchBar from './SearchBar'
   renderArtists = () => {
     const {artists} = this.props.artists
     const {input} = this.props.inputs
-    // console.log('ArtistMain: ', this.props)
     
     if (artists.items !== undefined) {
       return (
@@ -29,13 +28,12 @@ import SearchBar from './SearchBar'
       )
     }
   }
-  /*------------------------------------------------------------------------------------ */
+
   render() {
     return (
       <div className="artists-main-box">
-        <Link to="/" className="btn btn-xs back" role="button" >
-           Back to login
-         </Link>
+        <Link to="/" className="btn btn-lg back" role="button" > Back to login </Link>
+        <Link to="/newReleases" className="btn btn-lg releases" role="button" >New releases</Link>
         <h1 className="artists-title">The artists</h1>
         <SearchBar  />
         {this.renderArtists()}

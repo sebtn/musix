@@ -5,8 +5,6 @@
   color: #FFFCF9;
   font-weight: bold;
   .card-for-detail {
-/*    width: auto;
-    height: auto;*/
     .img-wrap {
       img {
       height: 30em;
@@ -20,12 +18,8 @@
       height: auto;
       list-style-type: none;
       & li{
-        /*line-height: 3.75rem;*/
+        margin: 1.25rem 0;
       } 
-      span  {
-/*        font-size: 1.25rem;
-        padding: 0.25rem;*/
-      }
     }
   }  
 }

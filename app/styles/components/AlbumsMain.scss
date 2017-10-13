@@ -1,11 +1,19 @@
 .albums-main-box {
-  .back, .back-art {
+  .back, .back-art, .releases {
     border-radius: 0;
     margin: 1.5rem 1rem;
     font: 1rem;
     font-weight: bold;
     background-color: #26547C;
     color: #FFFCF9;
+  }
+  .albums-title {
+    font-family: 'Bitter', serif;
+    text-align: center;
+    font-weight: bold;
+    margin: 2.75rem;
+    color:#ff8566;
+    font-size: 2.5rem;
   }
 }
 .albums-main-container {

@@ -20,7 +20,6 @@ function receiveAlbumTracks(state, tracks) {
   return state.merge(newState)
 }
 
-
 function fetchAlbumTracks(state) {
   let newState = Map({
     isFetching: true

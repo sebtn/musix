@@ -10,12 +10,13 @@
     height: auto;
     .track-box {
       background-color: #2B4162;
-      padding-left: 0.75em;      
+      padding-left: 1.25rem;      
       display: flex-inline;
       line-height: 2.75rem;
+      border-radius: 3rem;
       span  {
         font-size: 1rem;
-        padding: 0.25em;
+        padding: 0.75em;
       }
     }
   }  
