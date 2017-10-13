@@ -11,9 +11,9 @@ You can use it locally, just make sure ```git```, ```node``` and ```npm``` are i
 + Open ```localhost:3000``` and begin browsing your favorite music.
 
 For some help visit: 
-https://nodejs.org/en/download/package-manager/
-https://www.npmjs.com/get-npm
-https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
++ https://nodejs.org/en/download/package-manager/
++ https://www.npmjs.com/get-npm
++ https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
 ### Some notes
 The build process is automated and bundle files for development and production. ```bundle.js```, ```bundle,js.map```, ```bundle.js.gz``` will be generated inside the public folder once webpack has run and bundled all files inside the main application folder.
