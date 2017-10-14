@@ -12,15 +12,17 @@ export class TrackBox extends Component {
   }
 
   renderTrackBox = (data) => {
-    const trackNumber = data.track_number ? <sapn>{data.track_number}.  </sapn> : null
-    const trackName   = data.name ? <sapn>{data.name} <span> / </span> </sapn> : null
+    const trackNumber = data.track_number ? <sapn> {data.track_number}.  </sapn> : null
+    const trackName   = data.name ? <sapn> {data.name} <span> / </span> </sapn> : null
     const duration    = data.duration_ms ? <sapn> {this.converMsToSeconds(data.duration_ms)}  </sapn> : null
+    const discNUmber  = data.disc_number ? <span> <span>/</span> Disc  {data.disc_number} </span> : null
 
     return (
       <div className="track-box">
         {trackNumber}
         {trackName}
         {duration}
+        {discNUmber}
       </div>
     )
   } 

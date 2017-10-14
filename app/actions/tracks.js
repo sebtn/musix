@@ -3,7 +3,7 @@ import spotifyApi from './spoty'
 export const START_FETCH_ALBUM_TRACKS = 'START_FETCH_ALBUM_TRACKS'
 export const startFetchAlbumTracks = id => dispatch => {
     dispatch( fetchAlbumTracks(id) )
-    return spotifyApi.getAlbumTracks(id)
+    return spotifyApi.getAlbumTracks(id, {limit: 50})
       .then(json => dispatch( receiveAlbumTracks(json) )) 
       .catch(err => console.log(err))
 }

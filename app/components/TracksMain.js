@@ -41,6 +41,7 @@ import { startFetchAlbumTracks, startFetchAlbumDetails } from '../actions/tracks
     if(details !== undefined) {
       return (
         <div className="details-main-container">
+          {console.log(details)}
           <DetailBox details={details} />
         </div>
       )
@@ -55,8 +56,8 @@ import { startFetchAlbumTracks, startFetchAlbumDetails } from '../actions/tracks
         <Link to="/newReleases" className="btn btn-lg releases" role="button" >New releases</Link>
         <h1 className="tracks-title">The tracks and details</h1>
         <div className="row row-for-tracks-info ">
-          <div className="col-6">{this.renderDetails()}</div>
-          <div className="col-6">{this.renderTracks()}</div>
+          <div className="col-lg-6 col-xs-12">{this.renderDetails()}</div>
+          <div className="col-lg-6 col-xs-12">{this.renderTracks()}</div>
         </div>
       </div>
     )
